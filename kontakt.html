@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Naslovna</a></li>
+            <li><a href="index.html#prilagodba">Prilagodba materijala</a></li>
+            <li><a href="index.html#tehnologije">Tehnologije</a></li>
+            <li><a href="o-nama.html">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="kontakt-podaci">
+        <h1>Kontaktirajte nas</h1>
+        <p>Slobodno nam se obratite putem sljedećih kanala za bilo kakva pitanja ili suradnju:</p>
+        
+        <div class="kontakt-info">
+            <ul>
+                <li><strong>Telefon:</strong> +385 1 2345 678</li>
+                <li><strong>Mobilni telefon:</strong> +385 91 123 4567</li>
+                <li><strong>Faks:</strong> +385 1 2345 679</li>
+                <li><strong>E-mail:</strong> <a href="mailto:info@allseeing.hr">info@allseeing.hr</a></li>
+                <li><strong>Adresa:</strong> Ulica grada Vukovara 74, 10090 Zagreb, Hrvatska</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="forma">
+        <h2 style="text-align: left;">Pošaljite poruku</h2>
+        <form id="kontakt-forma">
+            <label for="ime">Vaše ime i prezime:</label>
+            <input type="text" id="ime" name="ime" required>
+
+            <label for="email">Vaš e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="poruka">Poruka:</label>
+            <textarea id="poruka" name="poruka" rows="5" required></textarea>
+
+            <button type="submit">Pošalji</button>
+        </form>
+        <div id="poruka-zahvale" style="display: none; text-align: center; margin-top: 20px; font-weight: bold; color: green;">
+            Hvala na ukazanom povjerenju, javit ćemo Vam se u najkraćem roku!
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

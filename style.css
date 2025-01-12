@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #004080;
+}
+
+/* Specifično pravilo za podnaslov u sekciji forme */
+section#forma > h2 {
+    text-align: left !important; /* Osiguranje da je podnaslov lijevo */
+    margin-left: 0; /* Uklanjanje bilo kakvog centra */
+    width: 100%;
+}
+
+/* Centriranje forme */
+section#forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form#kontakt-forma {
+    width: 100%;
+    max-width: 300px; /* Ograničenje širine forme */
+    display: flex;
+    flex-direction: column;
+}
+
+form#kontakt-forma label {
+    text-align: left;
+    width: 100%;
+}
+
+form#kontakt-forma input, 
+form#kontakt-forma textarea, 
+form#kontakt-forma button {
+    width: 100%;
+    margin-bottom: 10px; /* Smanjen razmak između polja za unos */
+}
+
+form#kontakt-forma button {
+    width: auto; /* Smanjenje širine tipke */
+    padding: 5px 10px; /* Smanjenje unutarnjeg razmaka za tipku */
+    align-self: center; /* Poravnavanje tipke na sredinu forme */
+}
+
+/* Centriranje podnožja */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    position: relative;
+    margin-top: auto; /* Gura podnožje na dno stranice */
+}
+
+/* Osnovni stil */
+* {
+    pointer-events: auto !important;
+}
