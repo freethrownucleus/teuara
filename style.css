@@ -1,3 +1,4 @@
+/* Osnovni stil za tijelo stranice */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,6 +10,141 @@ body {
     flex-direction: column;
 }
 
+.logo {
+    margin-top: 0.5rem;
+}
+
+/* Glavni kontejner za sadržaj */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar (lijevi izbornik) */
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f5;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Stil za navigaciju unutar sidebar-a */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Glavni sadržaj */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sekcije unutar glavnog sadržaja */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #004080;
+}
+
+/* Stil za formu unutar sekcije */
+section#forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form#kontakt-forma {
+    width: 100%;
+    max-width: 400px; /* Proširena širina za veću preglednost */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Unutarnji razmak oko forme */
+    background: #ffffff; /* Bijela pozadina */
+    border-radius: 10px; /* Zaobljeni rubovi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Suptilna sjena */
+}
+
+/* Stil za oznake (label) */
+form#kontakt-forma label {
+    text-align: left;
+    width: 100%;
+    font-weight: bold; /* Podebljan tekst */
+    margin-bottom: 5px; /* Razmak između oznake i polja */
+    color: #333; /* Suptilna tamna boja */
+}
+
+/* Polja za unos */
+form#kontakt-forma input,
+form#kontakt-forma textarea {
+    width: 100%;
+    padding: 10px; /* Unutarnji razmak */
+    margin-bottom: 15px; /* Razmak između polja */
+    border: 1px solid #ddd; /* Suptilni rub */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    font-size: 1rem; /* Usklađena veličina fonta */
+    background-color: #f9f9f9; /* Blago sivkasta pozadina */
+    transition: background-color 0.3s, border-color 0.3s; /* Glatka promjena boje */
+}
+
+form#kontakt-forma input:focus,
+form#kontakt-forma textarea:focus {
+    background-color: #fff; /* Bijela pozadina na fokus */
+    border-color: #004080; /* Plavi rub na fokus */
+    outline: none; /* Uklanja zadani fokus efekt */
+}
+
+/* Tekstualno polje */
+form#kontakt-forma textarea {
+    resize: vertical; /* Omogućava promjenu visine */
+    min-height: 100px; /* Minimalna visina */
+}
+
+/* Gumb za slanje */
+form#kontakt-forma button {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    padding: 10px 20px; /* Veći unutarnji razmak */
+    background-color: #004080; /* Tamnoplava pozadina */
+    color: white; /* Bijeli tekst */
+    border: none; /* Bez ruba */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    font-size: 1rem; /* Usklađena veličina fonta */
+    cursor: pointer; /* Ikona ruke */
+    transition: background-color 0.3s; /* Glatka promjena boje */
+}
+
+/* Hover efekt za gumb */
+form#kontakt-forma button:hover {
+    background-color: #003366; /* Tamnija plava na hover */
+}
+
+
+/* Header (zaglavlje) */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,73 +180,16 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-main {
-    flex: 1;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h1, section h2 {
-    color: #004080;
-}
-
-/* Specifično pravilo za podnaslov u sekciji forme */
-section#forma > h2 {
-    text-align: left !important; /* Osiguranje da je podnaslov lijevo */
-    margin-left: 0; /* Uklanjanje bilo kakvog centra */
-    width: 100%;
-}
-
-/* Centriranje forme */
-section#forma {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-form#kontakt-forma {
-    width: 100%;
-    max-width: 300px; /* Ograničenje širine forme */
-    display: flex;
-    flex-direction: column;
-}
-
-form#kontakt-forma label {
-    text-align: left;
-    width: 100%;
-}
-
-form#kontakt-forma input, 
-form#kontakt-forma textarea, 
-form#kontakt-forma button {
-    width: 100%;
-    margin-bottom: 10px; /* Smanjen razmak između polja za unos */
-}
-
-form#kontakt-forma button {
-    width: auto; /* Smanjenje širine tipke */
-    padding: 5px 10px; /* Smanjenje unutarnjeg razmaka za tipku */
-    align-self: center; /* Poravnavanje tipke na sredinu forme */
-}
-
-/* Centriranje podnožja */
+/* Footer (podnožje) */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #004080;
     color: white;
-    position: relative;
-    margin-top: auto; /* Gura podnožje na dno stranice */
+    margin-top: auto; /* Gura footer na dno stranice */
 }
 
-/* Osnovni stil */
+/* Osnovni stil za sve elemente */
 * {
-    pointer-events: auto !important;
+    box-sizing: border-box;
 }

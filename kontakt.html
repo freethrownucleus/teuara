@@ -25,41 +25,58 @@
     </nav>
 </header>
 
-<main>
-    <section id="kontakt-podaci">
-        <h1>Kontaktirajte nas</h1>
-        <p>Slobodno nam se obratite putem sljedećih kanala za bilo kakva pitanja ili suradnju:</p>
-        
-        <div class="kontakt-info">
-            <ul>
-                <li><strong>Telefon:</strong> +385 1 2345 678</li>
-                <li><strong>Mobilni telefon:</strong> +385 91 123 4567</li>
-                <li><strong>Faks:</strong> +385 1 2345 679</li>
-                <li><strong>E-mail:</strong> <a href="mailto:info@allseeing.hr">info@allseeing.hr</a></li>
-                <li><strong>Adresa:</strong> Ulica grada Vukovara 74, 10090 Zagreb, Hrvatska</li>
-            </ul>
-        </div>
-    </section>
+<div class="container">
+    <!-- Lijevi izbornik -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+            <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
+            <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
+            <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
+            <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
+            <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+            <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
+            <li><a href="audio.html">Audio prilagodbe</a></li>
+            <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
+            <li><a href="smjernice.html">Smjernice za predavače</a></li>
+            <li><a href="predlosci.html">Predlošci uz predavanje</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section id="kontakt-podaci">
+            <h1>Kontaktirajte nas</h1>
+            <p>Slobodno nam se obratite putem sljedećih kanala za bilo kakva pitanja ili suradnju:</p>
+            
+            <div class="kontakt-info">
+                <ul>
+                    <li><strong>Telefon/Fax:</strong> +385 1 5885 250</li>
+                    <li><strong>Mobilni telefon:</strong> +385 99 252 8550</li>
+                    <li><strong>E-mail:</strong> <a href="mailto:info@allseeing.hr">info@allseeing.hr</a></li>
+                    <li><strong>Adresa:</strong> Ulica grada Vukovara 74, 10090 Zagreb, Hrvatska</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="forma">
-        <h2 style="text-align: left;">Pošaljite poruku</h2>
-        <form id="kontakt-forma">
-            <label for="ime">Vaše ime i prezime:</label>
-            <input type="text" id="ime" name="ime" required>
+        <section id="forma">
+            <h2 style="text-align: left;">Pošaljite poruku</h2>
+            <form id="kontakt-forma">
+                <label for="ime">Vaše ime i prezime:</label>
+                <input type="text" id="ime" name="ime" required>
 
-            <label for="email">Vaš e-mail:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Vaš e-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="poruka">Poruka:</label>
-            <textarea id="poruka" name="poruka" rows="5" required></textarea>
+                <label for="poruka">Poruka:</label>
+                <textarea id="poruka" name="poruka" rows="5" required></textarea>
 
-            <button type="submit">Pošalji</button>
-        </form>
-        <div id="poruka-zahvale" style="display: none; text-align: center; margin-top: 20px; font-weight: bold; color: green;">
-            Hvala na ukazanom povjerenju, javit ćemo Vam se u najkraćem roku!
-        </div>
-    </section>
-</main>
+                <button type="submit">Pošalji</button>
+            </form>
+            <div id="poruka-zahvale" style="display: none; text-align: center; margin-top: 20px; font-weight: bold; color: green;">
+                Hvala na ukazanom povjerenju, javit ćemo Vam se u najkraćem mogućem roku!
+            </div>
+        </section>
+    </main>
+</div>
 
 <footer>
     <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>

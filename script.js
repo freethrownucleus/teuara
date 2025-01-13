@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     formSection.innerHTML = `
                         <h2 style="text-align: left;">Pošaljite poruku</h2>
                         <form id="kontakt-forma">
-                            <label for="ime">Vaše ime:</label><br>
-                            <input type="text" id="ime" name="ime" required><br><br>
+                            <label for="ime">Vaše ime i prezime:</label>
+                            <input type="text" id="ime" name="ime" required>
 
-                            <label for="email">Vaš e-mail:</label><br>
-                            <input type="email" id="email" name="email" required><br><br>
+                            <label for="email">Vaš e-mail:</label>
+                            <input type="email" id="email" name="email" required>
 
-                            <label for="poruka">Poruka:</label><br>
-                            <textarea id="poruka" name="poruka" rows="5" required></textarea><br><br>
+                            <label for="poruka">Poruka:</label>
+                            <textarea id="poruka" name="poruka" rows="5" required></textarea>
 
-                            <button type="submit" style="padding: 10px 20px; font-size: 1em; cursor: pointer;">Pošalji</button>
+                            <button type="submit">Pošalji</button>
                         </form>
                     `;
 
