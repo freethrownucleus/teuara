@@ -20,6 +20,18 @@ body {
     flex: 1;
 }
 
+/* Stil za tekst "Video lekcije" */
+.video-lekcije-header {
+    background-color: #004080; /* Plava pozadina */
+    color: white; /* Bijeli tekst */
+    padding: 10px; /* Unutarnji razmak */
+    margin-top: 0px;
+    margin-bottom: 20px; /* Razmak ispod */
+    font-weight: bold; /* Podebljani tekst */
+    text-align: center; /* Centriranje teksta */
+}
+
+
 /* Sidebar (lijevi izbornik) */
 .sidebar {
     width: 250px;
@@ -148,14 +160,14 @@ form#kontakt-forma button:hover {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Vertikalno centriranje elemenata u headeru */
     background-color: #004080;
     color: white;
     padding: 10px 20px;
 }
 
 header .logo img {
-    height: 60px;
+    height: 70px;
     width: auto;
 }
 
@@ -164,10 +176,13 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center; /* Centriranje svih stavki izbornika */
+    align-items: center; /* Vertikalno centriranje stavki unutar izbornika */
+    height: 100%; /* Osigurava da izbornik ima visinu koja omogućava centriranje */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 30px;
 }
 
 nav ul li a {
@@ -179,6 +194,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffcc00;
 }
+
 
 /* Footer (podnožje) */
 footer {

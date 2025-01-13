@@ -2,7 +2,7 @@
 document.querySelectorAll("nav ul li a").forEach(link => {
     link.addEventListener("click", event => {
         const href = link.getAttribute("href");
-        
+
         // Provjera je li link sidro na istoj stranici (počinje s '#')
         if (href.startsWith("#")) {
             event.preventDefault();
@@ -38,7 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         Hvala na ukazanom povjerenju, javit ćemo Vam se u najkraćem roku!
                     </p>
                     <div style="text-align: center; margin-top: 20px;">
-                        <button id="nova-poruka" style="padding: 10px 20px; font-size: 1em; cursor: pointer;">
+                        <button id="nova-poruka" style="
+                            width: fit-content; 
+                            display: block; 
+                            margin: auto; 
+                            padding: 10px 20px; 
+                            font-size: 1rem; 
+                            cursor: pointer; 
+                            background-color: #004080; 
+                            color: white; 
+                            border: none; 
+                            border-radius: 5px; 
+                            transition: background-color 0.3s;">
                             Pošalji novu poruku
                         </button>
                     </div>
