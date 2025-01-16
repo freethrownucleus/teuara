@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p style="text-align: center; font-size: 1.5em; font-weight: bold; color: green;">
                         Hvala na ukazanom povjerenju, javit ćemo Vam se u najkraćem roku!
                     </p>
+                    <img src="smiley-glasses.png" alt="Smiley with glasses" style="display: block; margin: 20px auto; width: 300px;">
                     <div style="text-align: center; margin-top: 20px;">
                         <button id="nova-poruka" style="
                             width: fit-content; 

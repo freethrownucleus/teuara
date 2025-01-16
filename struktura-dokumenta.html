@@ -26,8 +26,8 @@
 <div class="container">
     <!-- Lijevi izbornik -->
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p> <!-- Dodana klasa za stiliziranje -->
-        <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+        <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
+        <ul class="video-lekcije-list">
             <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
@@ -45,9 +45,28 @@
     <main>
         <section>
             <h1>Struktura dokumenta</h1>
-            <p>
-                Jasna struktura dokumenta ključna je za navigaciju. Koristite hijerarhiju naslova (H1, H2, H3) i grupirajte sadržaj u logične cjeline.
-            </p>
+            <p>Jasna struktura dokumenta ključna je za navigaciju. Koristite hijerarhiju naslova (H1, H2, H3) i grupirajte sadržaj u logične cjeline.</p>
+        </section>
+
+        <section>
+            <h2>Loš primjer</h2>
+            <p>Naslovi bez logične hijerarhije i preskakanje razina naslova:</p>
+            <pre>
+                &lt;h1&gt;Glavni naslov&lt;/h1&gt;
+                &lt;h4&gt;Podnaslov bez H2 i H3&lt;/h4&gt;
+                &lt;p&gt;Sadržaj bez jasne strukture.&lt;/p&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Dobar primjer</h2>
+            <p>Pravilno strukturirani dokument s jasnom hijerarhijom naslova:</p>
+            <pre>
+                &lt;h1&gt;Glavni naslov&lt;/h1&gt;
+                &lt;h2&gt;Prvi podnaslov&lt;/h2&gt;
+                &lt;h3&gt;Sekcija unutar podnaslova&lt;/h3&gt;
+                &lt;p&gt;Sadržaj strukturiran po sekcijama.&lt;/p&gt;
+            </pre>
         </section>
     </main>
 </div>

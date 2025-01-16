@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternativni tekst za slike</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stilovi za primjere alternativnog teksta */
+        .bad-alt-example img, .good-alt-example img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        .example-section {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,6 +59,22 @@
             <p>
                 Alt-tekst pruža opis slike korisnicima koji koriste čitače ekrana. Alt-tekst treba biti kratak, ali informativan, npr. "Grafikon koji prikazuje rast prodaje".
             </p>
+
+            <div class="example-section">
+                <h2>Primjeri:</h2>
+
+                <h3>Loš primjer</h3>
+                <div class="bad-alt-example">
+                    <img src="piramida_2023_hr.png" alt="">
+                    <p><strong>Problem:</strong> Nedostatak alternativnog teksta znači da korisnici čitača ekrana ne dobivaju nikakvu informaciju o slici.</p>
+                </div>
+
+                <h3>Dobar primjer</h3>
+                <div class="good-alt-example">
+                    <img src="piramida_2023_hr.png" alt="Dobna piramida stanovništva za 2021. godinu s prikazom muškaraca i žena po dobnim skupinama">
+                    <p><strong>Rješenje:</strong> Opis slike daje korisne informacije korisnicima čitača ekrana, poput konteksta i svrhe slike.</p>
+                </div>
+            </div>
         </section>
     </main>
 </div>

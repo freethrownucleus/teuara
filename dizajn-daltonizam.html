@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dizajn prilagođen daltonizmu</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Loš dizajn: zelena i crvena boja bez dodatnih indikatora */
+        .bad-chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .bad-bar {
+            width: 100px;
+            height: 200px;
+            margin: 0 10px;
+        }
+        .bad-bar.green {
+            background-color: green;
+        }
+        .bad-bar.red {
+            background-color: red;
+        }
+
+        /* Popravljen dizajn: različite boje, teksture i oznake */
+        .good-chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .good-bar {
+            width: 100px;
+            height: 200px;
+            margin: 0 10px;
+            position: relative;
+        }
+        .good-bar.blue {
+            background-color: blue;
+            background-image: repeating-linear-gradient(45deg, white 0, white 5px, blue 5px, blue 10px);
+        }
+        .good-bar.orange {
+            background-color: orange;
+            background-image: repeating-linear-gradient(135deg, white 0, white 5px, orange 5px, orange 10px);
+        }
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,6 +95,24 @@
             <p>
                 Prilikom dizajniranja za osobe s daltonizmom, ključno je koristiti kombinacije boja koje su lako razlikovljive, poput plave i narančaste, umjesto crvene i zelene.
             </p>
+            <!-- Primjer lošeg i dobrog dizajna -->
+            <h2>Primjer:</h2>
+
+            <h3>Loš dizajn</h3>
+            <div class="bad-chart">
+                <div class="bad-bar green"></div>
+                <div class="bad-bar red"></div>
+            </div>
+
+            <h3>Dobar dizajn</h3>
+            <div class="good-chart">
+                <div class="good-bar blue">
+                    <div class="bar-label">Kategorija A</div>
+                </div>
+                <div class="good-bar orange">
+                    <div class="bar-label">Kategorija B</div>
+                </div>
+            </div>
         </section>
     </main>
 </div>
