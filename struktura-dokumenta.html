@@ -5,6 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Struktura dokumenta</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        main {
+            width: 75%;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #003060;
+        }
+
+        textarea {
+            font-family: monospace;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,10 +76,9 @@
 </header>
 
 <div class="container">
-    <!-- Lijevi izbornik -->
     <aside class="sidebar">
         <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-        <ul class="video-lekcije-list">
+        <ul>
             <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
@@ -45,28 +96,56 @@
     <main>
         <section>
             <h1>Struktura dokumenta</h1>
-            <p>Jasna struktura dokumenta ključna je za navigaciju. Koristite hijerarhiju naslova (H1, H2, H3) i grupirajte sadržaj u logične cjeline.</p>
+            <p>
+                Jasna struktura dokumenta ključna je za navigaciju i pristupačnost. Pogrešno postavljena struktura otežava čitanje korisnicima, dok pravilna struktura povećava preglednost i omogućuje intuitivnu navigaciju. 
+            </p>
         </section>
 
         <section>
             <h2>Loš primjer</h2>
-            <p>Naslovi bez logične hijerarhije i preskakanje razina naslova:</p>
+            <p>Ovaj primjer prikazuje dokument bez jasne strukture i hijerarhije:</p>
             <pre>
-                &lt;h1&gt;Glavni naslov&lt;/h1&gt;
-                &lt;h4&gt;Podnaslov bez H2 i H3&lt;/h4&gt;
-                &lt;p&gt;Sadržaj bez jasne strukture.&lt;/p&gt;
+<h1>Pravila ponašanja</h1>
+<h4>Pristup sustavu</h4>
+<p>Za prijavu je potrebno unijeti korisničko ime.</p>
+<h4>Preporuke za pristup</h4>
+<p>Koristite moderni preglednik za bolje iskustvo.</p>
+<p>Takva struktura stvara konfuziju jer naslovi nisu pravilno raspoređeni po važnosti.</p>
             </pre>
         </section>
 
         <section>
             <h2>Dobar primjer</h2>
-            <p>Pravilno strukturirani dokument s jasnom hijerarhijom naslova:</p>
+            <p>U ovom primjeru koristi se ispravna hijerarhija naslova:</p>
             <pre>
-                &lt;h1&gt;Glavni naslov&lt;/h1&gt;
-                &lt;h2&gt;Prvi podnaslov&lt;/h2&gt;
-                &lt;h3&gt;Sekcija unutar podnaslova&lt;/h3&gt;
-                &lt;p&gt;Sadržaj strukturiran po sekcijama.&lt;/p&gt;
+<h1>Pravila ponašanja</h1>
+<h2>Pristup sustavu</h2>
+<p>Za prijavu unesite svoje korisničko ime i lozinku.</p>
+<h3>Koraci za prijavu</h3>
+<p>1. Otvorite login stranicu.<br>2. Unesite korisničke podatke.<br>3. Kliknite na "Prijava".</p>
+<h2>Preporuke za pristup</h2>
+<p>Preporučujemo korištenje modernog preglednika kako biste osigurali najbolje iskustvo.</p>
             </pre>
+        </section>
+
+        <section>
+            <h2>Kreirajte strukturirani dokument</h2>
+            <p>Unesite tekst s indeksima važnosti. Na primjer:</p>
+            <pre>
+1. Glavni naslov
+2. Podnaslov
+3. Podnaslov manje važnosti
+4. Podnaslov još manje važnosti
+5. Podnaslov najmanje važnosti
+tekst - sadržaj dokumenta
+            </pre>
+
+            <div class="input-group">
+                <textarea id="user-input" rows="12" placeholder="Unesite naslove po razinama i tekst..."></textarea>
+            </div>
+
+            <button onclick="generirajDokument()">Generiraj dokument</button>
+            <iframe id="rezultat" style="height: 400px;"></iframe>
         </section>
     </main>
 </div>
@@ -74,6 +153,38 @@
 <footer>
     <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>
 </footer>
+
+<script>
+    function generirajDokument() {
+        const input = document.getElementById('user-input').value;
+        const lines = input.split('\n');
+        let html = '';
+
+        lines.forEach(line => {
+            const trimmedLine = line.trim();
+
+            if (trimmedLine.startsWith('1.')) {
+                html += `<h1>${trimmedLine.substring(2).trim()}</h1>`;
+            } else if (trimmedLine.startsWith('2.')) {
+                html += `<h2>${trimmedLine.substring(2).trim()}</h2>`;
+            } else if (trimmedLine.startsWith('3.')) {
+                html += `<h3>${trimmedLine.substring(2).trim()}</h3>`;
+            } else if (trimmedLine.startsWith('4.')) {
+                html += `<h4>${trimmedLine.substring(2).trim()}</h4>`;
+            } else if (trimmedLine.startsWith('5.')) {
+                html += `<h5>${trimmedLine.substring(2).trim()}</h5>`;
+            } else if (trimmedLine.toLowerCase().startsWith('tekst')) {
+                html += `<p>${trimmedLine.substring(5).trim()}</p>`;
+            }
+        });
+
+        const iframe = document.getElementById('rezultat');
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        iframeDoc.open();
+        iframeDoc.write(html);
+        iframeDoc.close();
+    }
+</script>
 
 </body>
 </html>

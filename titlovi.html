@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titlovi i transkripti</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        header .logo img {
+            max-height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        aside {
+            width: 25%;
+            padding-right: 20px;
+        }
+        main {
+            width: 75%;
+        }
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,10 +77,9 @@
     </header>
 
     <div class="container">
-        <!-- Lijevi izbornik -->
         <aside class="sidebar">
             <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-            <ul class="video-lekcije-list">
+            <ul>
                 <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
                 <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
                 <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
@@ -40,37 +93,30 @@
                 <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
             </ul>
         </aside>
+
         <main>
             <section>
                 <h1>Titlovi i transkripti</h1>
                 <p>
                     Titlovi i transkripti ključni su za uključivanje osoba s oštećenjem sluha te korisnika koji preferiraju čitati umjesto slušati sadržaj.
                 </p>
-                <h2>Zašto koristiti titlove i transkripte?</h2>
-                <ul>
-                    <li>Omogućuju pristup sadržaju osobama s oštećenjem sluha.</li>
-                    <li>Olakšavaju razumijevanje korisnicima koji slabo govore jezik sadržaja.</li>
-                    <li>Prikladni su za korisnike u tihim ili bučnim okruženjima.</li>
-                </ul>
-                <h2>Preporuke za titlove</h2>
-                <ul>
-                    <li>Koristite jednostavan i čitljiv font, npr. sans-serif fontove.</li>
-                    <li>Veličina fonta treba biti dovoljno velika za lako čitanje, minimalno 16 px.</li>
-                    <li>Sinkronizirajte titlove s video sadržajem.</li>
-                    <li>Dodajte opise zvukova (npr. "[glazba u pozadini]") za bolje razumijevanje konteksta.</li>
-                </ul>
-                <h2>Preporuke za transkripte</h2>
-                <ul>
-                    <li>Pripremite točan tekstualni zapis cijelog audio ili video sadržaja.</li>
-                    <li>Strukturirajte transkript s logičnim odlomcima i oznakama govornika.</li>
-                    <li>Uključite dodatne informacije, poput opisa zvukova i vizualnih elemenata.</li>
-                </ul>
-                <h2>Primjer titla</h2>
-                <code>
-                    [00:00] Dobrodošli na našu videolekciju.<br>
-                    [00:05] Danas ćemo govoriti o pristupačnosti sadržaja.<br>
-                    [00:10] [Zvuk klika miša]
-                </code>
+
+                <section>
+                    <h2>Generator titlova</h2>
+                    <p>Unesite tekstualni sadržaj, a generator će automatski formatirati titlove s vremenskim oznakama.</p>
+                    
+                    <form id="subtitleForm">
+                        <textarea id="transcriptInput" rows="10" placeholder="Unesite tekst ili transkript ovdje..."></textarea><br>
+                        <label for="timeInterval">Interval vremena za titlove (u sekundama):</label>
+                        <input type="number" id="timeInterval" value="5" min="1"><br><br>
+                        <button type="button" onclick="generateSubtitles()">Generiraj titlove</button>
+                    </form>
+
+                    <h3>Generirani titlovi</h3>
+                    <div id="subtitleOutput">
+                        <pre>Ovde će biti prikazani generirani titlovi...</pre>
+                    </div>
+                </section>
             </section>
         </main>
     </div>
@@ -78,5 +124,36 @@
     <footer>
         <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>
     </footer>
+
+    <script>
+        function generateSubtitles() {
+            const transcript = document.getElementById("transcriptInput").value.trim();
+            const timeInterval = parseInt(document.getElementById("timeInterval").value, 10);
+            const outputDiv = document.getElementById("subtitleOutput");
+            
+            if (!transcript) {
+                outputDiv.innerHTML = "<pre>Molimo unesite tekst za generiranje titlova.</pre>";
+                return;
+            }
+
+            const lines = transcript.split('\n');
+            let formattedSubtitles = '';
+            let startTime = 0;
+
+            for (let i = 0; i < lines.length; i++) {
+                const endTime = startTime + timeInterval;
+                formattedSubtitles += `[${formatTime(startTime)} - ${formatTime(endTime)}] ${lines[i]}\n`;
+                startTime = endTime;
+            }
+
+            outputDiv.innerHTML = `<pre>${formattedSubtitles}</pre>`;
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+        }
+    </script>
 </body>
 </html>

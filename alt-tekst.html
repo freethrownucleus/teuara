@@ -9,11 +9,28 @@
         /* Stilovi za primjere alternativnog teksta */
         .bad-alt-example img, .good-alt-example img {
             width: 100%;
-            max-width: 400px;
+            max-width: 650px; /* Povećanje širine slika */
             height: auto;
+            display: block;
+            margin: 0 auto; /* Centriranje slika */
         }
+
+        /* Stil za odjeljak s primjerima */
         .example-section {
             margin-top: 20px;
+        }
+
+        /* Stil za tekst ispod slike u dobrom primjeru */
+        .good-alt-example p {
+            font-style: italic;
+            margin-top: 10px;
+            text-align: center; /* Centriranje teksta ispod slike */
+        }
+
+        /* Poravnanje teksta u lijevo za Problem i Rješenje */
+        .bad-alt-example p, .good-alt-example p:not(.good-alt-example p:first-of-type) {
+            text-align: left;
+            font-style: normal; /* Standardni stil za tekst */
         }
     </style>
 </head>
@@ -65,13 +82,14 @@
 
                 <h3>Loš primjer</h3>
                 <div class="bad-alt-example">
-                    <img src="piramida_2023_hr.png" alt="">
+                    <img src="opce_kretanje_2023_hr.png" alt="">
                     <p><strong>Problem:</strong> Nedostatak alternativnog teksta znači da korisnici čitača ekrana ne dobivaju nikakvu informaciju o slici.</p>
                 </div>
 
                 <h3>Dobar primjer</h3>
                 <div class="good-alt-example">
-                    <img src="piramida_2023_hr.png" alt="Dobna piramida stanovništva za 2021. godinu s prikazom muškaraca i žena po dobnim skupinama">
+                    <img src="opce_kretanje_2023_hr.png" alt="Dobna piramida stanovništva za 2021. godinu s prikazom muškaraca i žena po dobnim skupinama">
+                    <p><strong>Slika 1.</strong> Opće kretanje stanovništva u Hrvatskoj od 1857. do 2021. godine.</p>
                     <p><strong>Rješenje:</strong> Opis slike daje korisne informacije korisnicima čitača ekrana, poput konteksta i svrhe slike.</p>
                 </div>
             </div>

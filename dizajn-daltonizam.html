@@ -6,50 +6,53 @@
     <title>Dizajn prilagođen daltonizmu</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Loš dizajn: zelena i crvena boja bez dodatnih indikatora */
-        .bad-chart {
-            display: flex;
-            justify-content: space-around;
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 20px 0;
-        }
-        .bad-bar {
-            width: 100px;
-            height: 200px;
-            margin: 0 10px;
-        }
-        .bad-bar.green {
-            background-color: green;
-        }
-        .bad-bar.red {
-            background-color: red;
         }
 
-        /* Popravljen dizajn: različite boje, teksture i oznake */
-        .good-chart {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-        .good-bar {
-            width: 100px;
-            height: 200px;
-            margin: 0 10px;
-            position: relative;
-        }
-        .good-bar.blue {
-            background-color: blue;
-            background-image: repeating-linear-gradient(45deg, white 0, white 5px, blue 5px, blue 10px);
-        }
-        .good-bar.orange {
-            background-color: orange;
-            background-image: repeating-linear-gradient(135deg, white 0, white 5px, orange 5px, orange 10px);
-        }
-        .bar-label {
-            position: absolute;
-            bottom: -25px;
-            width: 100%;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
             text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .status {
             font-weight: bold;
+        }
+
+        /* Stil za dobar primjer */
+        .better-design td.status.completed {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .better-design td.status.not-completed {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .better-design td.priority {
+            font-style: italic;
+        }
+
+        /* Dodavanje ikona i oznaka za pristupačnost */
+        .better-design td.status.completed::after {
+            content: " ✔";
+        }
+
+        .better-design td.status.not-completed::after {
+            content: " ✘";
+        }
+
+        /* Filtri za simulaciju daltonizma */
+        svg {
+            display: none;
         }
     </style>
 </head>
@@ -73,8 +76,8 @@
 <div class="container">
     <!-- Lijevi izbornik -->
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p> <!-- Dodana klasa za stiliziranje -->
-        <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+        <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
+        <ul class="video-lekcije-list">
             <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
@@ -93,26 +96,116 @@
         <section>
             <h1>Dizajn prilagođen daltonizmu</h1>
             <p>
-                Prilikom dizajniranja za osobe s daltonizmom, ključno je koristiti kombinacije boja koje su lako razlikovljive, poput plave i narančaste, umjesto crvene i zelene.
+                Kada izrađujete sadržaj za osobe s daltonizmom, ključno je osigurati da informacije budu jasne kroz višestruke metode prezentacije. Ovo uključuje:
             </p>
-            <!-- Primjer lošeg i dobrog dizajna -->
-            <h2>Primjer:</h2>
+            <ul>
+                <li>Korištenje boja koje nisu oslonjene na crvenu i zelenu.</li>
+                <li>Dodavanje tekstura, simbola i oznaka za razliku među elementima.</li>
+                <li>Korištenje jednostavnih ikona za dodatnu vizualnu razliku.</li>
+            </ul>
 
-            <h3>Loš dizajn</h3>
-            <div class="bad-chart">
-                <div class="bad-bar green"></div>
-                <div class="bad-bar red"></div>
-            </div>
+            <!-- Dodavanje opcije za simulaciju daltonizma -->
+            <h2>Simulacija daltonizma</h2>
+            <p>Odaberite tip daltonizma za simulaciju:</p>
+            <select id="simulation-selector">
+                <option value="none">Bez simulacije</option>
+                <option value="deuteranopia">Deuteranopija</option>
+                <option value="protanopia">Protanopija</option>
+                <option value="tritanopia">Tritanopija</option>
+            </select>
 
-            <h3>Dobar dizajn</h3>
-            <div class="good-chart">
-                <div class="good-bar blue">
-                    <div class="bar-label">Kategorija A</div>
-                </div>
-                <div class="good-bar orange">
-                    <div class="bar-label">Kategorija B</div>
-                </div>
-            </div>
+            <!-- Objašnjenje simulacija daltonizma -->
+            <h3>Objašnjenje simulacija:</h3>
+            <p>
+                Daltonizam se odnosi na poteškoće u prepoznavanju ili razlikovanju boja. Simulacije daltonizma na ovoj stranici omogućuju vam da vidite kako stranica izgleda osobama s različitim vrstama daltonizma:
+            </p>
+            <ul>
+                <li><strong>Deuteranopija:</strong> Najčešći oblik daltonizma, gdje osobe imaju smanjenu sposobnost prepoznavanja zelenih tonova.</li>
+                <li><strong>Protanopija:</strong> Osobe s ovim oblikom daltonizma imaju smanjenu sposobnost prepoznavanja crvenih tonova.</li>
+                <li><strong>Tritanopija:</strong> Ovaj oblik daltonizma smanjuje sposobnost prepoznavanja plavih i žutih tonova.</li>
+            </ul>
+
+            <!-- Objašnjenje tablice -->
+            <h3>Objašnjenje tablica:</h3>
+            <p>
+                U sljedećim tablicama prikazujemo zadatke i njihove atribute. Tablica uključuje nekoliko ključnih informacija:
+            </p>
+            <ul>
+                <li><strong>Ime:</strong> Ime osobe kojoj je zadatak dodeljen.</li>
+                <li><strong>Status zadatka:</strong> Ovdje je prikazana oznaka statusa zadatka. Koristimo boje i tekstualne oznake (Završen, Nije završen) kako bismo prikazali je li zadatak završen ili nije. Statusi imaju boje za bržu identifikaciju.</li>
+                <li><strong>Prioritet:</strong> Prioritet zadatka je označen s tri različite kategorije: Visok, Srednji i Nizak. Prioritet se također razlikuje bojom, što pomaže korisnicima brže prepoznati koliko je zadatak hitan.</li>
+                <li><strong>Rok:</strong> Datum kada je zadatak trebao biti završen. Pomaže korisnicima pratiti i ispuniti rokove.</li>
+            </ul>
+
+            <!-- Loš dizajn -->
+            <h2>Primjer lošeg dizajna</h2>
+            <p>Tablica koja koristi samo boje za razlikovanje statusa zadataka. Ovaj dizajn može biti problematičan za osobe s daltonizmom jer se ne koriste dodatni vizualni elementi (poput tekstualnih oznaka ili simbola) za prepoznavanje statusa:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Status zadatka</th>
+                        <th>Prioritet</th>
+                        <th>Rok</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ivan</td>
+                        <td style="background-color: #4caf50;">&nbsp;</td>
+                        <td style="background-color: #f17c0f;">&nbsp;</td>
+                        <td>15.01.2025.</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td style="background-color: #f44336;">&nbsp;</td>
+                        <td style="background-color: #f44336;">&nbsp;</td>
+                        <td>10.01.2025.</td>
+                    </tr>
+                    <tr>
+                        <td>Marko</td>
+                        <td style="background-color: #f44336;">&nbsp;</td>
+                        <td style="background-color: #4caf50;">&nbsp;</td>
+                        <td>20.01.2025.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Dobar dizajn -->
+            <h2>Primjer boljeg dizajna</h2>
+            <p>
+                Tablica koja koristi tekstualne opise, simbole i različite obrasce za bolju prepoznatljivost. Ovaj dizajn je bolje prilagođen korisnicima s daltonizmom jer koristi dodatne vizualne oznake koje pomažu razlikovanju statusa i prioriteta zadataka.
+            </p>
+            <table class="better-design">
+                <thead>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Status zadatka</th>
+                        <th>Prioritet</th>
+                        <th>Rok</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ivan</td>
+                        <td class="status completed" style="background-color: #4caf50; color: white;">Završen</td>
+                        <td class="status priority" style="background-color: #f17c0f; color: white;">Srednji</td>
+                        <td>15.01.2025.</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td class="status not-completed" style="background-color: #f44336; color: white;">Nije završen</td>
+                        <td class="status priority" style="background-color: #f44336; color: white;">Visok</td>
+                        <td>10.01.2025.</td>
+                    </tr>
+                    <tr>
+                        <td>Marko</td>
+                        <td class="status not-completed" style="background-color: #f44336; color: white;">Nije završen</td>
+                        <td class="status priority" style="background-color: #4caf50; color: white;">Nizak</td>
+                        <td>20.01.2025.</td>
+                    </tr>
+                </tbody>
+            </table>            
         </section>
     </main>
 </div>
@@ -120,6 +213,28 @@
 <footer>
     <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>
 </footer>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+    <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.56667, 0.43333, 0, 0, 0, 0.55833, 0.44167, 0, 0, 0, 0, 0.24167, 0.75833, 0, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+    <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.43333, 0.56667, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+</svg>
+
+<script>
+    const simulationSelector = document.getElementById('simulation-selector');
+    const content = document.querySelector('main');
+
+    simulationSelector.addEventListener('change', () => {
+        const filter = simulationSelector.value;
+        content.style.filter = filter === 'none' ? 'none' : `url(#${filter})`;
+    });
+</script>
 
 </body>
 </html>
