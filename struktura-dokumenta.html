@@ -9,15 +9,8 @@
         body {
             font-family: Arial, sans-serif;
         }
-        .container {
-            display: flex;
-            gap: 20px;
-        }
         main {
             width: 75%;
-        }
-        section {
-            margin-bottom: 40px;
         }
         pre {
             background: #f4f4f4;
@@ -33,7 +26,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-bottom: 40px;
         }
 
         button:hover {
@@ -51,10 +44,15 @@
             width: 100%;
             border: 1px solid #ccc;
             margin-top: 10px;
+
+        }
+        
+        #user-input {
+            font-size: 16px;
         }
 
-        .input-group {
-            margin-bottom: 20px;
+        h1 {
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -67,8 +65,7 @@
     <nav>
         <ul>
             <li><a href="index.html">Početna</a></li>
-            <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-            <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+            <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
             <li><a href="o-nama.html">O nama</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
@@ -77,46 +74,61 @@
 
 <div class="container">
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-        <ul>
-            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+        <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+        <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
             <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
             <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-            <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+            <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
             <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
             <li><a href="audio.html">Audio prilagodbe</a></li>
             <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-            <li><a href="smjernice.html">Smjernice za predavače</a></li>
             <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
         </ul>
     </aside>
 
     <main>
         <section>
-            <h1>Struktura dokumenta</h1>
+            <h2>Struktura dokumenta</h2>
             <p>
-                Jasna struktura dokumenta ključna je za navigaciju i pristupačnost. Pogrešno postavljena struktura otežava čitanje korisnicima, dok pravilna struktura povećava preglednost i omogućuje intuitivnu navigaciju. 
+                Jasna struktura dokumenta ključna je za navigaciju i pristupačnost. 
+                Struktura omogućuje korisnicima, osobito onima koji koriste čitače ekrana, 
+                lakše navigiranje kroz sadržaj. Dobro organizirani naslovi i jasno definirana hijerarhija 
+                olakšavaju razumijevanje informacija.
+            </p>
+            <p>
+                Korištenje ispravno strukturiranih naslova čini dokument pristupačnijim jer omogućuje korisnicima da brzo lociraju relevantne informacije i čitači ekrana mogu pravilno interpretirati hijerarhiju i uputiti korisnike na odgovarajući sadržaj.
             </p>
         </section>
 
         <section>
             <h2>Loš primjer</h2>
-            <p>Ovaj primjer prikazuje dokument bez jasne strukture i hijerarhije:</p>
+            <p>
+                Ovaj primjer prikazuje dokument bez jasne strukture i hijerarhije. 
+                Naslovi nisu ispravno raspoređeni po važnosti, što čini navigaciju zbunjujućom i teško razumljivom:
+            </p>
             <pre>
-<h1>Pravila ponašanja</h1>
+<h4>Pravila ponašanja</h4>
 <h4>Pristup sustavu</h4>
-<p>Za prijavu je potrebno unijeti korisničko ime.</p>
+<p>Za prijavu unesite svoje korisničko ime i lozinku.</p>
+<h4>Koraci za prijavu</h4>
+<p>Otvorite login stranicu.<br>Unesite korisničke podatke.<br>Kliknite na "Prijava".</p>
 <h4>Preporuke za pristup</h4>
-<p>Koristite moderni preglednik za bolje iskustvo.</p>
-<p>Takva struktura stvara konfuziju jer naslovi nisu pravilno raspoređeni po važnosti.</p>
+<p>Preporučujemo korištenje modernog preglednika kako biste osigurali najbolje iskustvo.</p>
             </pre>
+            <p>
+                <strong>Problem:</strong> nema jasne hijerarhije naslova. Naslovi su slučajno postavljeni, što može zbuniti korisnike i čitače ekrana. 
+                Na primjer, <code>&lt;h4&gt;</code> oznake nisu odgovarajuće za podnaslove koji trebaju biti označeni kao <code>&lt;h2&gt;</code> ili <code>&lt;h3&gt;</code>.
+            </p>
         </section>
 
         <section>
             <h2>Dobar primjer</h2>
-            <p>U ovom primjeru koristi se ispravna hijerarhija naslova:</p>
+            <p>
+                Ovdje je pravilno strukturirani dokument s ispravno postavljenim naslovima i jasno definiranim hijerarhijama:
+            </p>
             <pre>
 <h1>Pravila ponašanja</h1>
 <h2>Pristup sustavu</h2>
@@ -126,18 +138,34 @@
 <h2>Preporuke za pristup</h2>
 <p>Preporučujemo korištenje modernog preglednika kako biste osigurali najbolje iskustvo.</p>
             </pre>
+            <p>
+                <strong>Rješenje:</strong> ovdje je hijerarhija naslova jasno definirana. <code>&lt;h1&gt;</code> označava glavni naslov, 
+                <code>&lt;h2&gt;</code> označava podnaslove, a <code>&lt;h3&gt;</code> označava manje važne naslove, tj. podnaslove, a to omogućuje lakše snalaženje korisnicima i čitačima ekrana.
+            </p>
         </section>
 
         <section>
             <h2>Kreirajte strukturirani dokument</h2>
-            <p>Unesite tekst s indeksima važnosti. Na primjer:</p>
+            <p>
+                Ovdje možete unijeti sadržaj s numeracijom hijerarhije i generirati strukturirani dokument. 
+                Slijedite ove upute kako biste stvorili ispravan dokument:
+            </p>
+            <ul>
+                <li>Unesite <strong>1.</strong> za glavni naslov.</li>
+                <li>Unesite <strong>2.</strong> za podnaslov.</li>
+                <li>Unesite <strong>3.</strong>, <strong>4.</strong> ili <strong>5.</strong> za manje važne naslove, tj. podnaslove.</li>
+                <li>Za obični tekst upišite "tekst" i sadržaj nakon njega.</li>
+            </ul>
+            <p>Primjer unosa:</p>
             <pre>
-1. Glavni naslov
-2. Podnaslov
-3. Podnaslov manje važnosti
-4. Podnaslov još manje važnosti
-5. Podnaslov najmanje važnosti
-tekst - sadržaj dokumenta
+1. Pravila ponašanja
+2. Pristup sustavu
+tekst Unesite korisničko ime i lozinku za prijavu.
+3. Koraci za prijavu
+tekst 1. Otvorite login stranicu. 
+tekst 2. Unesite korisničke podatke.
+2. Preporuke za korištenje
+tekst Koristite moderni preglednik za bolje iskustvo.
             </pre>
 
             <div class="input-group">
@@ -145,7 +173,11 @@ tekst - sadržaj dokumenta
             </div>
 
             <button onclick="generirajDokument()">Generiraj dokument</button>
-            <iframe id="rezultat" style="height: 400px;"></iframe>
+            
+            <div>
+                <p><strong>Generirani dokument</strong> (u Arial fontu)<strong>:</strong></p>
+                <iframe id="rezultat" style="height: 350px;"></iframe>
+            </div>
         </section>
     </main>
 </div>
@@ -158,7 +190,7 @@ tekst - sadržaj dokumenta
     function generirajDokument() {
         const input = document.getElementById('user-input').value;
         const lines = input.split('\n');
-        let html = '';
+        let html = '<style>body { font-family: Arial, sans-serif; }</style>'; // Dodajte CSS za Arial font
 
         lines.forEach(line => {
             const trimmedLine = line.trim();
@@ -181,9 +213,10 @@ tekst - sadržaj dokumenta
         const iframe = document.getElementById('rezultat');
         const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
         iframeDoc.open();
-        iframeDoc.write(html);
+        iframeDoc.write(html); // Ubacite generirani HTML s definicijom fonta
         iframeDoc.close();
     }
+
 </script>
 
 </body>

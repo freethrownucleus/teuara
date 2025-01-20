@@ -9,28 +9,57 @@
         /* Stilovi za primjere alternativnog teksta */
         .bad-alt-example img, .good-alt-example img {
             width: 100%;
-            max-width: 650px; /* Povećanje širine slika */
+            max-width: 650px;
             height: auto;
             display: block;
-            margin: 0 auto; /* Centriranje slika */
+            margin: 0 auto;
         }
 
-        /* Stil za odjeljak s primjerima */
         .example-section {
             margin-top: 20px;
         }
 
-        /* Stil za tekst ispod slike u dobrom primjeru */
-        .good-alt-example p {
+        #good-example-image {
             font-style: italic;
-            margin-top: 10px;
-            text-align: center; /* Centriranje teksta ispod slike */
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        /* Poravnanje teksta u lijevo za Problem i Rješenje */
-        .bad-alt-example p, .good-alt-example p:not(.good-alt-example p:first-of-type) {
-            text-align: left;
-            font-style: normal; /* Standardni stil za tekst */
+        button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+        
+        ul {
+            margin-bottom: 50px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        kbd {
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -43,8 +72,7 @@
     <nav>
         <ul>
             <li><a href="index.html">Početna</a></li>
-            <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-            <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+            <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
             <li><a href="o-nama.html">O nama</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
@@ -54,18 +82,17 @@
 <div class="container">
     <!-- Lijevi izbornik -->
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p> <!-- Dodana klasa za stiliziranje -->
+        <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
         <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
-            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
             <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
             <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-            <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+            <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
             <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
             <li><a href="audio.html">Audio prilagodbe</a></li>
             <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-            <li><a href="smjernice.html">Smjernice za predavače</a></li>
             <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
         </ul>
     </aside>
@@ -73,26 +100,71 @@
     <main>
         <section>
             <h1>Alternativni tekst za slike</h1>
-            <p>
-                Alt-tekst pruža opis slike korisnicima koji koriste čitače ekrana. Alt-tekst treba biti kratak, ali informativan, npr. "Grafikon koji prikazuje rast prodaje".
+            <p id="intro-text">
+                Alt-tekst pruža opis slike korisnicima koji koriste čitače ekrana. Alt-tekst treba biti kratak, ali informativan, npr. „grafikon koji prikazuje rast prodaje”.
             </p>
+        </section>
 
+        <section>
             <div class="example-section">
-                <h2>Primjeri:</h2>
-
-                <h3>Loš primjer</h3>
+                <h2>Loš primjer</h2>
                 <div class="bad-alt-example">
                     <img src="opce_kretanje_2023_hr.png" alt="">
-                    <p><strong>Problem:</strong> Nedostatak alternativnog teksta znači da korisnici čitača ekrana ne dobivaju nikakvu informaciju o slici.</p>
-                </div>
-
-                <h3>Dobar primjer</h3>
-                <div class="good-alt-example">
-                    <img src="opce_kretanje_2023_hr.png" alt="Dobna piramida stanovništva za 2021. godinu s prikazom muškaraca i žena po dobnim skupinama">
-                    <p><strong>Slika 1.</strong> Opće kretanje stanovništva u Hrvatskoj od 1857. do 2021. godine.</p>
-                    <p><strong>Rješenje:</strong> Opis slike daje korisne informacije korisnicima čitača ekrana, poput konteksta i svrhe slike.</p>
+                    <p id="bad-example"><strong>Problem:</strong> nedostatak alternativnog teksta znači da korisnici čitača ekrana ne dobivaju nikakvu informaciju o slici.</p>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Dobar primjer</h2>
+                <div class="good-alt-example">
+                    <img src="opce_kretanje_2023_hr.png" alt="Dobna piramida stanovništva za 2021. godinu s prikazom muškaraca i žena po dobnim skupinama">
+                    <p id="good-example-image">Slika 1. Demografski trend Hrvatske od 1857. do 2021. godine.</p>
+                    <p id="good-example"><strong>Rješenje:</strong> opis slike daje korisne informacije korisnicima čitača ekrana, poput konteksta i svrhe slike.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Čitači ekrana -->
+        <section id="screen-reader">
+            <h2>Čitači ekrana</h2>
+            <p>Čitači ekrana omogućuju korisnicima s oštećenjem vida navigaciju i razumijevanje digitalnog sadržaja. Ovdje su dva najpoznatija čitača ekrana s detaljnim uputama za korištenje i testiranje:</p>
+            
+            <h3>1. NVDA (NonVisual Desktop Access)</h3>
+            <ul>
+                <li><strong>Preuzimanje i instalacija:</strong> posjetite <a href="https://www.nvaccess.org/" target="_blank">NVDA</a> službenu stranicu i preuzmite softver. Instalacija je jednostavna, a program je besplatan.</li>
+                <li><strong>Pokretanje:</strong> nakon instalacije, pokrenite NVDA. Govorni sintetizator automatski će početi čitati elemente na ekranu, poput naziva prozora, gumba i teksta.</li>
+                <li><strong>Osnovne kontrole:</strong>
+                    <ul>
+                        <li><kbd>Insert + Space</kbd>: aktivirajte NVDA način unosa.</li>
+                        <li><kbd>Insert + T</kbd>: pročitajte naslov trenutnog prozora.</li>
+                        <li><kbd>Arrow keys</kbd>: krećite se po tekstu ili elementima stranice.</li>
+                    </ul>
+                </li>
+                <li><strong>Testiranje:</strong> ostvorite web stranicu s alternativnim tekstom i provjerite čita li NVDA slike ispravno. Kretanjem tipkama strelica NVDA će pročitati sadržaj slike koristeći alt-tekst.</li>
+            </ul>
+            
+            <h3>2. JAWS (Job Access With Speech)</h3>
+            <ul>
+                <li><strong>Preuzimanje i instalacija:</strong> posjetite <a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank">JAWS</a> službenu stranicu. Softver je komercijalan, ali postoji probna verzija.</li>
+                <li><strong>Pokretanje:</strong> nakon instalacije pokrenite JAWS. Program će početi čitati elemente na ekranu čim se pokrene.</li>
+                <li><strong>Osnovne kontrole:</strong>
+                    <ul>
+                        <li><kbd>Insert + Down Arrow</kbd>: počnite čitati cijelu stranicu.</li>
+                        <li><kbd>Insert + F7</kbd>: prikažite popis linkova na stranici.</li>
+                        <li><kbd>Tab</kbd>: krećite se po interaktivnim elementima.</li>
+                    </ul>
+                </li>
+                <li><strong>Testiranje:</strong> otvorite neku stranicu i upotrijebite naredbu <kbd>Insert + Down Arrow</kbd> kako bi JAWS pročitao sadržaj. Pazite na to je li alt-tekst slika informativan i ispravan.</li>
+            </ul>
+            
+            <h3>Razlike između NVDA i JAWS-a:</h3>
+            <p>
+                NVDA je besplatan i jednostavan za upotrebu, pogodan za osnovno testiranje pristupačnosti. JAWS je moćniji i nudi napredne mogućnosti poput skripti za prilagodbu, ali je komercijalan i skuplji.
+            </p>
+            
+            <p><strong>Preporuka:</strong> ako trebate osnovni čitač ekrana za povremeno testiranje, NVDA je odličan izbor. Za naprednije korisnike koji trebaju detaljnu analizu, JAWS je bolja opcija.</p>
         </section>
     </main>
 </div>

@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naracija i opis vizualnih elemenata</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+        
+        figcaption {
+            text-align: center;
+            margin-top: 20px;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,8 +34,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-                <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -25,36 +44,59 @@
     <div class="container">
         <!-- Lijevi izbornik -->
         <aside class="sidebar">
-            <p class="video-lekcije-header"><strong>Videolekcije</strong></p> <!-- Dodana klasa za stiliziranje -->
+            <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
             <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
-                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
                 <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
                 <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
                 <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
                 <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-                <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+                <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
                 <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
                 <li><a href="audio.html">Audio prilagodbe</a></li>
                 <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-                <li><a href="smjernice.html">Smjernice za predavače</a></li>
                 <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
             </ul>
         </aside>
         <main>
             <section>
                 <h1>Naracija i opis vizualnih elemenata</h1>
-                <p>Prilikom izrade digitalnog sadržaja, naracija i opis vizualnih elemenata trebaju biti jasni i kontekstualni. To uključuje:</p>
-                <ul>
-                    <li><strong>Opis bitnih detalja:</strong> Ako sadržaj uključuje grafikone, slike ili videozapise, važno je opisati njihov značaj i svrhu.</li>
-                    <li><strong>Dodavanje audiodeskripcije:</strong> Za videozapise, osigurajte audiodeskripciju koja objasnjava što se događa u vizualnom dijelu.</li>
-                    <li><strong>Jednostavnost jezika:</strong> Koristite jezik koji je razumljiv i izbjegavajte prekomjernu složenost.</li>
-                </ul>
-                
-                <h2>Loš primjer:</h2>
-                <p>"Ovdje je grafikon."</p>
+                <p>Prilikom izrade digitalnog sadržaja, ključan je zadatak osigurati da vizualni elementi budu dostupni i razumljivi svima, uključujući i osobe s invaliditetom ili korisnike koji možda ne mogu izravno vidjeti sadržaj. Jasna i detaljna naracija te opisi vizualnih elemenata omogućuju veću inkluzivnost i pristupačnost. Ovo uključuje pružanje dodatnih informacija o značenju, kontekstu i ključnim detaljima prikazanim u grafikama, slikama ili drugim vizualima kako bi svi korisnici mogli razumjeti sadržaj neovisno o korištenju asistivnih tehnologija.</p>
 
-                <h2>Dobar primjer:</h2>
-                <p>"Grafikon prikazuje porast broja korisnika interneta između 2010. i 2020. godine. Plava linija predstavlja broj korisnika u Europi, dok crvena linija prikazuje korisnike u Aziji."</p>
+                <p>Naracija i opis vizualnih elemenata trebaju biti strukturirani, sažeti i usredotočeni na ono što je zaista važno za korisnika. Na primjer, opis grafikona ili slike ne smije biti samo površni prikaz oblika ili boja, već i objašnjenje odnosa između elemenata, podataka koji se ističu i konteksta unutar kojeg ti elementi postoje.</p>
+
+            </section>
+
+            <section>
+                <h2>Osnovni principi za pisanje opisa</h2>
+                <ul>
+                    <li><strong>Preciznost i jasnost:</strong> opis treba jasno identificirati ključne elemente vizuala i njihov značaj. Na primjer, umjesto da samo navedemo „grafikon prikazuje stanovništvo”, potrebno je detaljno objasniti koje su dobne skupine uključene, kako su podaci podijeljeni po spolu i koji se trendovi mogu uočiti.</li>
+                    <li><strong>Interpretacija informacija:</strong> opis mora pružiti dovoljno informacija da korisnici razumiju ulogu vizualnog elementa u širem sadržaju. Ako, primjerice, grafikon prikazuje demografske promjene tijekom vremena, interpretacija može uključivati dodatne podatke o značaju tih promjena.</li>
+                    <li><strong>Korištenje jednostavnog jezika:</strong> izbjegavajte tehnički kompleksan jezik ili stručnu terminologiju kada ona nije nužna. Cilj je da opis bude razumljiv svima, bez obzira na njihovu razinu predznanja.</li>
+                </ul>
+
+            </section>
+            <section>
+                <h2>Primjer lošeg opisa</h2>
+                <figure>
+                    <img src="piramida_2023_hr.png" alt="Dobna piramida stanovništva Hrvatske za 2021. godinu, razvrstana po dobnim skupinama i spolu." />
+                    <figcaption>Slika 2. Dobna piramida stanovništva Hrvatske za 2021. godinu.</figcaption>
+                </figure></br>
+
+                <p><strong>„Ovdje je prikazan grafikon.“</strong></p>
+                <p>Ovakav opis ne pruža korisnicima nikakve korisne informacije o sadržaju grafikona. Ne objašnjava temu, strukturu ili značenje prikazanih podataka čime se otežava razumijevanje.</p>
+
+            </section>
+            <section>
+
+                <h2>Primjer dobrog opisa</h2>
+                <figure>
+                    <img src="piramida_2023_hr.png" alt="Dobna piramida stanovništva Hrvatske za 2021. godinu, razvrstana po dobnim skupinama i spolu." />
+                    <figcaption>Slika 2. Dobna piramida stanovništva Hrvatske za 2021. godinu.</figcaption>
+                </figure></br>
+
+                <p><strong>„Grafikon prikazuje dobnu piramidu stanovništva Hrvatske za 2021. godinu. Lijeva strana grafikona prikazuje postotak muškog stanovništva označenog plavom bojom, dok desna strana pokazuje postotak ženskog stanovništva označenog crvenom bojom. Dobne skupine su raspoređene u horizontalnim trakama, počevši od najmlađe skupine (0-4 godine) na dnu do najstarije skupine (85+ godina) na vrhu. Grafikon jasno pokazuje da su muški i ženski udjeli približno jednaki u mlađim dobnim skupinama, dok u starijim dobnim skupinama, poput onih iznad 80 godina, prevladava žensko stanovništvo. Takva raspodjela ukazuje na veći životni vijek žena u usporedbi s muškarcima.“</strong></p>
+                <p>Opis detaljno i jasno objašnjava ključne elemente grafikona, uključujući temu (dobna piramida stanovništva Hrvatske), način prikaza podataka (postotak muškog i ženskog stanovništva, dobne skupine) i važan kontekst (razlike u raspodjeli između spolova u različitim dobnim skupinama). Uz to, koristi jednostavan jezik i tumači značenje prikazanih podataka (npr. veći životni vijek žena). </p>
             </section>
         </main>
     </div>

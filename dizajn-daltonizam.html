@@ -22,6 +22,14 @@
             background-color: #f2f2f2;
         }
 
+        h3 {
+            margin-top: 50px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
         .status {
             font-weight: bold;
         }
@@ -54,92 +62,140 @@
         svg {
             display: none;
         }
+
+        label[for="image-upload"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        label[for="image-upload"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Stil za padajući izbornik */
+        #simulation-selector {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        /* Skriva zadani file input */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Stilizirani gumb */
+        .custom-file-button {
+            width: fit-content;
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            background-color: #004080; /* Plava boja gumba */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover efekt za gumb */
+        .custom-file-button:hover {
+            background-color: #002d5a; /* Tamnija plava boja za hover */
+        }
+
+        img#uploaded-image {
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-            <li><a href="#tehnologije">Preporučene tehnologije</a></li>
-            <li><a href="o-nama.html">O nama</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="container">
     <!-- Lijevi izbornik -->
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-        <ul class="video-lekcije-list">
-            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+        <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+        <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
             <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
             <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-            <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+            <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
             <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
             <li><a href="audio.html">Audio prilagodbe</a></li>
             <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-            <li><a href="smjernice.html">Smjernice za predavače</a></li>
             <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
         </ul>
     </aside>
 
     <main>
         <section>
-            <h1>Dizajn prilagođen daltonizmu</h1>
+            <h2>Dizajn prilagođen osobama s daltonizmom</h2>
             <p>
-                Kada izrađujete sadržaj za osobe s daltonizmom, ključno je osigurati da informacije budu jasne kroz višestruke metode prezentacije. Ovo uključuje:
+                Daltonizam, poremećaj prepoznavanja boja, utječe na sposobnost razlikovanja određenih boja, najčešće crvene i zelene. Kako biste osigurali da vaš dizajn bude pristupačan i jasno razumljiv osobama s ovim izazovom, važno je primijeniti više metoda za prijenos informacija. Pristupačan dizajn nije samo tehnička potreba, već i izraz brige za inkluzivnost. 
+            </p>
+            <p>
+                Evo nekoliko ključnih smjernica koje će vam pomoći u izradi prilagođenog dizajna:
             </p>
             <ul>
-                <li>Korištenje boja koje nisu oslonjene na crvenu i zelenu.</li>
-                <li>Dodavanje tekstura, simbola i oznaka za razliku među elementima.</li>
-                <li>Korištenje jednostavnih ikona za dodatnu vizualnu razliku.</li>
+                <li>
+                    <strong>Nemojte se oslanjati isključivo na boje:</strong> kako bi informacije bile razumljive, koristite dodatne metode razlikovanja poput oblika, veličine, simbola i tekstualnih opisa. Primjerice, uz boje dodajte poruke poput „Greška” ili „Ispravno” kako biste osigurali jasnu komunikaciju.
+                </li>
+                <li>
+                    <strong>Osigurajte visok kontrast:</strong> kombinirajte boje koje imaju jasne razlike u svjetlini i nijansi. Ovo posebno vrijedi za tekst na pozadini gdje kontrast treba biti dovoljno jak da se informacije lako čitaju. Alati za provjeru kontrasta, poput „contrast checkera“, mogu pomoći u provjeri dizajna.
+                </li>
+                <li>
+                    <strong>Koristite jasne i prepoznatljive ikone:</strong> simboli poput strelica, kvačica (✓) ili križića (X) mogu dodatno naglasiti značenje, ali trebaju biti popraćeni tekstualnim objašnjenjima za maksimalnu jasnoću.
+                </li>
+                <li>
+                    <strong>Dodajte opisne tekstualne oznake:</strong> sva značenja prenesena bojama trebaju imati i tekstualnu alternativu. Na primjer, na semaforima ili u grafikonima tekst poput „Zaustavi“ ili „Kreni“ može biti dodatak boji za jasnu interpretaciju.
+                </li>
+                <li>
+                    <strong>Koristite alate za simulaciju daltonizma:</strong> testirajte svoj dizajn uz pomoć alata koji simuliraju različite vrste daltonizma, poput protanopije ili deuteranopije, kako biste osigurali da je dizajn razumljiv širokom spektru korisnika.
+                </li>
+                <li>
+                    <strong>Omogućite prilagodbe korisničkog sučelja:</strong> omogućite korisnicima opcije poput prilagodbe boja, povećanja kontrasta ili dodavanja dodatnih oznaka kako bi sami mogli optimizirati prikaz prema vlastitim potrebama.
+                </li>
             </ul>
+        </section>
+        
 
-            <!-- Dodavanje opcije za simulaciju daltonizma -->
-            <h2>Simulacija daltonizma</h2>
-            <p>Odaberite tip daltonizma za simulaciju:</p>
-            <select id="simulation-selector">
-                <option value="none">Bez simulacije</option>
-                <option value="deuteranopia">Deuteranopija</option>
-                <option value="protanopia">Protanopija</option>
-                <option value="tritanopia">Tritanopija</option>
-            </select>
-
-            <!-- Objašnjenje simulacija daltonizma -->
-            <h3>Objašnjenje simulacija:</h3>
-            <p>
-                Daltonizam se odnosi na poteškoće u prepoznavanju ili razlikovanju boja. Simulacije daltonizma na ovoj stranici omogućuju vam da vidite kako stranica izgleda osobama s različitim vrstama daltonizma:
-            </p>
-            <ul>
-                <li><strong>Deuteranopija:</strong> Najčešći oblik daltonizma, gdje osobe imaju smanjenu sposobnost prepoznavanja zelenih tonova.</li>
-                <li><strong>Protanopija:</strong> Osobe s ovim oblikom daltonizma imaju smanjenu sposobnost prepoznavanja crvenih tonova.</li>
-                <li><strong>Tritanopija:</strong> Ovaj oblik daltonizma smanjuje sposobnost prepoznavanja plavih i žutih tonova.</li>
-            </ul>
-
-            <!-- Objašnjenje tablice -->
-            <h3>Objašnjenje tablica:</h3>
-            <p>
-                U sljedećim tablicama prikazujemo zadatke i njihove atribute. Tablica uključuje nekoliko ključnih informacija:
-            </p>
-            <ul>
-                <li><strong>Ime:</strong> Ime osobe kojoj je zadatak dodeljen.</li>
-                <li><strong>Status zadatka:</strong> Ovdje je prikazana oznaka statusa zadatka. Koristimo boje i tekstualne oznake (Završen, Nije završen) kako bismo prikazali je li zadatak završen ili nije. Statusi imaju boje za bržu identifikaciju.</li>
-                <li><strong>Prioritet:</strong> Prioritet zadatka je označen s tri različite kategorije: Visok, Srednji i Nizak. Prioritet se također razlikuje bojom, što pomaže korisnicima brže prepoznati koliko je zadatak hitan.</li>
-                <li><strong>Rok:</strong> Datum kada je zadatak trebao biti završen. Pomaže korisnicima pratiti i ispuniti rokove.</li>
-            </ul>
-
+        <section>
             <!-- Loš dizajn -->
             <h2>Primjer lošeg dizajna</h2>
-            <p>Tablica koja koristi samo boje za razlikovanje statusa zadataka. Ovaj dizajn može biti problematičan za osobe s daltonizmom jer se ne koriste dodatni vizualni elementi (poput tekstualnih oznaka ili simbola) za prepoznavanje statusa:</p>
+            <p>Tablica koja koristi samo boje za razlikovanje statusa zadataka. Ovakav dizajn može biti problematičan za osobe s daltonizmom jer se ne koriste dodatni vizualni elementi (poput tekstualnih oznaka ili simbola) za prepoznavanje statusa:</p>
             <table>
                 <thead>
                     <tr>
@@ -152,29 +208,31 @@
                 <tbody>
                     <tr>
                         <td>Ivan</td>
-                        <td style="background-color: #4caf50;">&nbsp;</td>
-                        <td style="background-color: #f17c0f;">&nbsp;</td>
+                        <td style="background-color: #66b968;">&nbsp;</td>
+                        <td style="background-color: #f59031;">&nbsp;</td>
                         <td>15.01.2025.</td>
                     </tr>
                     <tr>
                         <td>Ana</td>
-                        <td style="background-color: #f44336;">&nbsp;</td>
-                        <td style="background-color: #f44336;">&nbsp;</td>
+                        <td style="background-color: #e45348;">&nbsp;</td>
+                        <td style="background-color: #e45348;">&nbsp;</td>
                         <td>10.01.2025.</td>
                     </tr>
                     <tr>
                         <td>Marko</td>
-                        <td style="background-color: #f44336;">&nbsp;</td>
-                        <td style="background-color: #4caf50;">&nbsp;</td>
+                        <td style="background-color: #e45348;">&nbsp;</td>
+                        <td style="background-color: #66b968;">&nbsp;</td>
                         <td>20.01.2025.</td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section>
             
             <!-- Dobar dizajn -->
             <h2>Primjer boljeg dizajna</h2>
             <p>
-                Tablica koja koristi tekstualne opise, simbole i različite obrasce za bolju prepoznatljivost. Ovaj dizajn je bolje prilagođen korisnicima s daltonizmom jer koristi dodatne vizualne oznake koje pomažu razlikovanju statusa i prioriteta zadataka.
+                Tablica koja koristi tekstualne opise, simbole i različite obrasce za bolju prepoznatljivost uz dobar kontrast. Ovakav dizajn bolje je prilagođen korisnicima s daltonizmom jer koristi dodatne vizualne oznake koje pomažu razlikovanju statusa i prioriteta zadataka:
             </p>
             <table class="better-design">
                 <thead>
@@ -188,25 +246,63 @@
                 <tbody>
                     <tr>
                         <td>Ivan</td>
-                        <td class="status completed" style="background-color: #4caf50; color: white;">Završen</td>
-                        <td class="status priority" style="background-color: #f17c0f; color: white;">Srednji</td>
+                        <td class="status completed" style="background-color: #66b968; color: black;">Završen</td>
+                        <td class="status priority" style="background-color: #f59031; color: black;">Srednji</td>
                         <td>15.01.2025.</td>
                     </tr>
                     <tr>
                         <td>Ana</td>
-                        <td class="status not-completed" style="background-color: #f44336; color: white;">Nije završen</td>
-                        <td class="status priority" style="background-color: #f44336; color: white;">Visok</td>
+                        <td class="status not-completed" style="background-color: #e45348; color: black;">Nije završen</td>
+                        <td class="status priority" style="background-color: #e45348; color: black;">Visok</td>
                         <td>10.01.2025.</td>
                     </tr>
                     <tr>
                         <td>Marko</td>
-                        <td class="status not-completed" style="background-color: #f44336; color: white;">Nije završen</td>
-                        <td class="status priority" style="background-color: #4caf50; color: white;">Nizak</td>
+                        <td class="status not-completed" style="background-color: #e45348; color: black;">Nije završen</td>
+                        <td class="status priority" style="background-color: #66b968; color: black;">Nizak</td>
                         <td>20.01.2025.</td>
                     </tr>
                 </tbody>
             </table>            
         </section>
+
+        <section>
+            <!-- Dodavanje opcije za simulaciju daltonizma -->
+            <h2>Simulacija daltonizma</h2>
+            <h3>Odaberite tip daltonizma za simulaciju</h3>
+            <select id="simulation-selector">
+                <option value="none">Bez simulacije</option>
+                <option value="deuteranopia">Deuteranopija</option>
+                <option value="protanopia">Protanopija</option>
+                <option value="tritanopia">Tritanopija</option>
+            </select>
+
+            <!-- Dodavanje mogućnosti za upload slike -->
+            <h3>Dodajte svoju sliku za simulaciju</h3>
+
+            <div id="image-container">
+                <img id="uploaded-image" src="" alt="Uploaded Image" style="max-width: 100%; display: none;">
+            </div>
+
+            <div style="text-align: center;">
+                <label for="image-upload" class="custom-file-button">Odaberi datoteku</label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+            <div id="image-container">
+                <img id="uploaded-image" src="" alt="Uploaded Image" style="max-width: 100%; display: none;">
+            </div>
+            <!-- Objašnjenje simulacija daltonizma -->
+            <h3>Objašnjenje simulacija</h3>
+            <p>
+                Daltonizam se odnosi na poteškoće u prepoznavanju ili razlikovanju boja. Simulacije daltonizma na ovoj stranici omogućuju vam da vidite kako stranica izgleda osobama s različitim vrstama daltonizma:
+            </p>
+            <ul>
+                <li><strong>Deuteranopija:</strong> najčešći oblik daltonizma gdje osobe imaju smanjenu sposobnost prepoznavanja zelenih tonova.</li>
+                <li><strong>Protanopija:</strong> osobe s ovim oblikom daltonizma imaju smanjenu sposobnost prepoznavanja crvenih tonova.</li>
+                <li><strong>Tritanopija:</strong> ovaj oblik daltonizma smanjuje sposobnost prepoznavanja plavih i žutih tonova.</li>
+            </ul>
+        </section>
+        
     </main>
 </div>
 
@@ -228,11 +324,26 @@
 
 <script>
     const simulationSelector = document.getElementById('simulation-selector');
-    const content = document.querySelector('main');
+    const content = document.querySelector('body');
+    const imageInput = document.getElementById('image-upload');
+    const imagePreview = document.getElementById('image-preview');
+    const uploadedImage = document.getElementById('uploaded-image');
 
     simulationSelector.addEventListener('change', () => {
         const filter = simulationSelector.value;
         content.style.filter = filter === 'none' ? 'none' : `url(#${filter})`;
+    });
+
+    imageInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                uploadedImage.src = e.target.result;
+                uploadedImage.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
     });
 </script>
 

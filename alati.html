@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alati za provjeru pristupačnosti</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        h3 {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,8 +19,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-                <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -25,18 +29,17 @@
     <div class="container">
         <!-- Lijevi izbornik -->
         <aside class="sidebar">
-            <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-            <ul class="video-lekcije-list">
-                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+            <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+            <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
                 <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
                 <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
                 <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
                 <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-                <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+                <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
                 <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
                 <li><a href="audio.html">Audio prilagodbe</a></li>
                 <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-                <li><a href="smjernice.html">Smjernice za predavače</a></li>
                 <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
             </ul>
         </aside>
@@ -44,56 +47,70 @@
             <section>
                 <h1>Alati za provjeru pristupačnosti</h1>
                 <p>
-                    Alati za provjeru pristupačnosti pomažu dizajnerima i programerima osigurati da sadržaji budu pristupačni svim korisnicima, uključujući osobe s invaliditetom. Ovdje su neki od najpopularnijih alata:
+                    Alati za provjeru pristupačnosti ključni su korak u osiguravanju da web stranice i digitalni sadržaji budu pristupačni svim korisnicima, uključujući osobe s oštećenjem vida. Pomažu dizajnerima i programerima u prepoznavanju problema koji mogu ometati pristup informacijama osobama s različitim vrstama problema s vidom kao što su slabovidnost, daltonizam i sljepoća.
                 </p>
-                <h2>Preporučeni alati</h2>
+            </section>
+            <section>
+                <h2>WAVE - Web Accessibility Evaluation Tool</h2>
+                <p>
+                    <strong><a href="https://wave.webaim.org/" target="_blank">WAVE</a></strong> je besplatan alat koji omogućuje analizu pristupačnosti web stranica. Pruža detaljne povratne informacije o problemima koji mogu otežati korištenje stranice osobama s oštećenjem vida kao što su problemi s kontrastom boja i čitljivošću teksta.
+                </p>
+                <p>
+                    Osobe s problemima vida često se oslanjaju na visoki kontrast između boja teksta i pozadine kako bi lakše čitale sadržaj. WAVE može analizirati te aspekte stranice i ukazati na nedostatke poput slabog kontrasta boja, nepravilno označenih slika ili pogrešno strukturiranih naslova.
+                </p>
+                <p>
+                    Korištenje WAVE-a za provjeru web stranica korisno je kako bi se osigurao pristup za osobe koje koriste čitače ekrana ili druge tehnologije za pomoć i omogućilo bolje iskustvo i navigaciju na webu.
+                </p>
+                <h3>Kako koristiti WAVE</h3>
                 <ul>
-                    <li>
-                        <strong><a href="https://wave.webaim.org/" target="_blank">WAVE</a></strong>: Analizira web-stranice i pruža povratne informacije o pristupačnosti.
-                    </li>
-                    <li>
-                        <strong><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a></strong>: Provjerava kontrast između boja teksta i pozadine.
-                    </li>
-                    <li>
-                        <strong><a href="https://axe-core.org/" target="_blank">Axe</a></strong>: Ekstenzija za preglednike za detaljno testiranje pristupačnosti.
-                    </li>
-                    <li>
-                        <strong><a href="https://chrome.google.com/webstore/detail/accessibility-insights/dpdbgiplchgpflilmglikikgfpigompc" target="_blank">Accessibility Insights</a></strong>: Alat za provjeru i automatsko testiranje pristupačnosti u Chromeu.
-                    </li>
-                    <li>
-                        <strong><a href="https://colororacle.org/" target="_blank">Color Oracle</a></strong>: Simulira kako osobe s različitim vrstama daltonizma vide boje.
-                    </li>
+                    <li>Posjetite stranicu <a href="https://wave.webaim.org/" target="_blank">WAVE</a></li>
+                    <li>Unesite URL vaše web stranice u odgovarajuće polje i pritisnite „Submit”</li>
+                    <li>Pregledajte rezultate i obratite pažnju na označene probleme s kontrastom, tekstovima i drugim pristupačnim značajkama.</li>
                 </ul>
-                <h2>Prednosti korištenja alata</h2>
+                <p>Preporučamo pogledati donji videozapis kako biste stekli bolji uvid u WAVE i njegove funkcionalnosti:</p>
+                <video controls width="640" height="360">
+                    <source src="wave.mp4" type="video/mp4">
+                    Vaš preglednik ne podržava HTML5 video element.
+                </video>
+            </section>
+            
+            <section>
+                <h2>Microsoft Accessibility Checker</h2>
+                <p>
+                    Pristupačnost nije važna samo na web stranicama, već i u dokumentima poput Microsoft Word i PowerPoint prezentacija. Takvi dokumenti ključni su za obrazovne i poslovne svrhe, a pravilno formatirani dokumenti omogućuju pristup svim korisnicima.
+                </p>
+                <p>
+                    Microsoft Word i PowerPoint sadrže alate za provjeru pristupačnosti (<a href="https://www.microsoft.com/accessibility" target="_blank">Microsoft Accessibility Checker</a>) koji automatski analiziraju dokumente i pružaju smjernice za poboljšanje. Provjeravaju kontrast boja, strukturu teksta, oznake slika i druge aspekte koji mogu biti problematični za osobe s oštećenjem vida kao što je čitač ekrana.
+                </p>
+            
+                <h3>Kako koristiti alat za provjeru pristupačnosti u Wordu i PowerPointu</h3>
                 <ul>
-                    <li>Prepoznavanje problema s kontrastom boja i čitljivošću.</li>
-                    <li>Identifikacija pogrešaka u strukturi stranice, poput neispravnih naslova.</li>
-                    <li>Simulacija iskustava korisnika s invaliditetom.</li>
+                    <li>Otvorite svoj dokument u Wordu ili PowerPointu.</li>
+                    <li>U Wordu ili PowerPointu kliknite na „File” (Datoteka) u gornjem lijevom kutu, a zatim odaberite „Info” (Informacije).</li>
+                    <li>Odaberite „Check for Issues” (Provjeri probleme) i zatim „Check Accessibility” (Provjeri pristupačnost).</li>
+                    <li>Pregledajte popis problema i slijedite preporuke za poboljšanje kao što su dodavanje alternativnog teksta za slike ili podešavanje kontrasta boja.</li>
                 </ul>
-                <h2>Primjer korištenja alata</h2>
+            
                 <p>
-                    U nastavku je primjer korištenja WebAIM Contrast Checkera:
+                    Preporučamo pogledati donji videozapis kako biste stekli bolji uvid u testiranje pristupačnosti kod Word i Powerpoint datoteka:
                 </p>
-                <img src="example-contrast.png" alt="Primjer rezultata kontrastnog alata">
+                <video controls width="640" height="360">
+                    <source src="microsoft.mp4" type="video/mp4">
+                    Vaš preglednik ne podržava HTML5 video element.
+                </video>
+            </section>
+            
+
+            <section>
+                <h2>Smjernice za dizajn dokumenta</h2>
                 <p>
-                    Na slici je prikazano kako alat evaluira omjer kontrasta između boja. Korisnik može unijeti heksadecimalne kodove boja za testiranje.
-                </p>
-                <h2>Simulacija daltonizma</h2>
-                <p>
-                    Kako biste vidjeli kako vaša stranica izgleda osobama s različitim vrstama daltonizma, koristite <strong><a href="https://colororacle.org/" target="_blank">Color Oracle</a></strong>.
-                </p>
-                <h2>Kako koristiti alate za provjeru pristupačnosti</h2>
-                <p>
-                    Kako biste provjerili pristupačnost vaše web stranice, možete koristiti nekoliko alata. Evo kako koristiti nekoliko najpopularnijih alata:
-                </p>
-                <ul>
-                    <li><strong><a href="https://wave.webaim.org/" target="_blank">WAVE</a></strong>: Posjetite ovu stranicu i unesite URL vaše stranice kako biste testirali pristupačnost.</li>
-                    <li><strong><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a></strong>: Provjerite kontrast boja na vašoj web stranici unoseći heksadecimalne kodove boja.</li>
-                    <li><strong><a href="https://axe-core.org/" target="_blank">Axe</a></strong>: Instalirajte ekstenziju za preglednik za detaljno testiranje pristupačnosti na vašoj stranici.</li>
-                </ul>
-                <h2>Smjernice</h2>
-                <p>
-                    Preporučujemo redovito testiranje svih web-stranica i dokumenata tijekom izrade kako bi se osiguralo pridržavanje standarda pristupačnosti, poput WCAG (Web Content Accessibility Guidelines).
+                    Kako bi dokumenti bili pristupačni, preporučuje se:
+                    <ul>
+                        <li>Koristiti odgovarajuće naslove i strukturu teksta, jer to pomaže korisnicima čitača ekrana.</li>
+                        <li>Dodati alternativni tekst za slike i grafike.</li>
+                        <li>Osigurati dovoljno kontrasta između teksta i pozadine.</li>
+                        <li>Izbjegavati korištenje samo boje za prenošenje informacija (npr. u grafikama ili dijagramima).</li>
+                    </ul>
                 </p>
             </section>
         </main>

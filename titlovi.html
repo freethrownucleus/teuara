@@ -6,57 +6,9 @@
     <title>Titlovi i transkripti</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #f4f4f4;
-            padding: 10px 20px;
-            border-bottom: 2px solid #ddd;
-        }
-        header .logo img {
-            max-height: 50px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-        .container {
-            display: flex;
-            padding: 20px;
-        }
-        aside {
-            width: 25%;
-            padding-right: 20px;
-        }
-        main {
-            width: 75%;
-        }
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
         textarea {
             width: 100%;
             margin-bottom: 10px;
-        }
-        pre {
-            background: #eee;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
     </style>
 </head>
@@ -68,8 +20,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-                <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -78,82 +29,120 @@
 
     <div class="container">
         <aside class="sidebar">
-            <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-            <ul>
-                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+            <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+            <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
                 <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
                 <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
                 <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
                 <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-                <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+                <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
                 <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
                 <li><a href="audio.html">Audio prilagodbe</a></li>
                 <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-                <li><a href="smjernice.html">Smjernice za predavače</a></li>
                 <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
             </ul>
         </aside>
 
         <main>
             <section>
-                <h1>Titlovi i transkripti</h1>
+                <h2>Titlovi u videozapisima</h2>
                 <p>
-                    Titlovi i transkripti ključni su za uključivanje osoba s oštećenjem sluha te korisnika koji preferiraju čitati umjesto slušati sadržaj.
+                    Titlovi su ključno pomagalo za osobe s oštećenjem vida i sve korisnike koji preferiraju tekstualni sadržaj umjesto zvučnog. Alati za dodavanje titlova u videozapise omogućuju dodavanje titlova na videozapise s ciljem poboljšanja pristupačnosti, kao i optimizacije sadržaja za veću uključenost publike.
                 </p>
-
-                <section>
-                    <h2>Generator titlova</h2>
-                    <p>Unesite tekstualni sadržaj, a generator će automatski formatirati titlove s vremenskim oznakama.</p>
-                    
-                    <form id="subtitleForm">
-                        <textarea id="transcriptInput" rows="10" placeholder="Unesite tekst ili transkript ovdje..."></textarea><br>
-                        <label for="timeInterval">Interval vremena za titlove (u sekundama):</label>
-                        <input type="number" id="timeInterval" value="5" min="1"><br><br>
-                        <button type="button" onclick="generateSubtitles()">Generiraj titlove</button>
-                    </form>
-
-                    <h3>Generirani titlovi</h3>
-                    <div id="subtitleOutput">
-                        <pre>Ovde će biti prikazani generirani titlovi...</pre>
-                    </div>
-                </section>
             </section>
+            
+            <section>
+                <h2>Audacity</h2>
+                <p>
+                    <strong>Audacity</strong> je alat za uređivanje zvuka koji se često koristi za optimizaciju audiozapisa prije dodavanja titlova. Iako Audacity nije specijaliziran alat za titlove, on igra ključnu ulogu u pripremi audio materijala za preciznu sinkronizaciju titlova.
+                    <ul>
+                        <li>Uklanja šumove i poboljšava kvalitetu zvuka, što je ključno za bolju razumljivost zvučnog sadržaja.</li>
+                        <li>Pruža vizualizaciju zvučnih valova, što omogućava precizno označavanje trenutaka u govoru koje treba povezati s titlovima.</li>
+                        <li>Besplatan je i dostupan za sve glavne operativne sustave (Windows, macOS, Linux).</li>
+                    </ul>
+                    <p>
+                        Kako koristiti:
+                    </p>
+                    <ol>
+                        <li>Preuzmite i instalirajte Audacity sa <a href="https://www.audacityteam.org/" target="_blank">službene stranice</a>.</li>
+                        <li>Otvorite audiozapis videozapisa koji želite titlovati.</li>
+                        <li>Koristite opcije za čišćenje zvuka, uklanjanje šuma i poboljšanje glasnoće za bolju razumljivost.</li>
+                        <li>Vizualizirajte zvučne valove kako biste precizno označili dijelove koji trebaju titlove, zatim izvezite poboljšani zvuk.</li>
+                        <li>Koristite alat poput Aegisub za kreiranje titlova na temelju poboljšanog zvuka.</li>
+                    </ol>
+                </p>
+            </section>
+            
+            <section>
+                <h2>Canva</h2>
+                <p>
+                    <strong>Canva</strong> je popularni alat za grafički dizajn koji također omogućuje jednostavno dodavanje tekstualnih elemenata, uključujući titlove za videozapise. Iako Canva nije primarno alat za titlovanje, može biti korisna za kreiranje prezentacija i vizualnih sadržaja s tekstovima, koje kasnije možete sinkronizirati s videozapisima.
+                    <ul>
+                        <li>Omogućuje lako dodavanje tekstualnih slojeva na slike, videozapise i druge vrste multimedijskih materijala.</li>
+                        <li>Posjeduje brojne predloške za izradu prezentacija i marketinških materijala koji uključuju tekstualne upute, savjete i slične sadržaje.</li>
+                        <li>Jednostavno se koristi s drag-and-drop funkcijama koje omogućuju brzo kreiranje profesionalnih dizajna bez potrebe za tehničkim znanjem.</li>
+                    </ul>
+                    <p>
+                        Kako koristiti:
+                    </p>
+                    <ol>
+                        <li>Prijavite se na <a href="https://www.canva.com" target="_blank">Canva</a> i odaberite predložak za video ili prezentaciju.</li>
+                        <li>Dodajte tekst na željeni dio videa, poput titlova za određene dijelove sadržaja.</li>
+                        <li>Spremite dizajn i preuzmite ga, a zatim sinkronizirajte tekst s videozapisima s pomoću drugih alata poput Aegisub.</li>
+                    </ol>
+                </p>
+            </section>
+            
+            <section>
+                <h2>Aegisub</h2>
+                <p>
+                    <strong>Aegisub</strong> je besplatan i vrlo moćan alat za ručno kreiranje, uređivanje i sinkroniziranje titlova. Ovaj program je najprikladniji za korisnike koji žele imati potpunu kontrolu nad vremenskim oznakama, stiliziranjem i formatiranjem titlova.
+                    <ul>
+                        <li>Podržava mnoge formate titlova, uključujući .srt, .ass i .ssa, što ga čini fleksibilnim u mnogim situacijama.</li>
+                        <li>Omogućuje precizno usklađivanje titlova s videozapisom, uključujući vremenske oznake koje omogućuju da tekst bude usklađen s govorom.</li>
+                        <li>Posjeduje napredne opcije za stiliziranje, uključujući boje, fontove i pozicioniranje titlova na ekranu.</li>
+                    </ul>
+                    <p>
+                        Kako koristiti:
+                    </p>
+                    <ol>
+                        <li>Preuzmite i instalirajte Aegisub sa <a href="http://www.aegisub.org/" target="_blank">službene stranice</a>.</li>
+                        <li>Otvorite videozapis i počnite dodavati titlove liniju po liniju.</li>
+                        <li>Precizno sinkronizirajte titlove s vremenskim oznakama pomoću ugrađenog preglednika.</li>
+                        <li>Izvezite titlove u željeni format (npr. .srt, .ass) i upotrijebite ih u video uređivačima ili u konačnoj prezentaciji.</li>
+                    </ol>
+                </p>
+            </section>
+
+            <section>
+                <h2>Kako dodati titlove u videozapis s pomoću Canve?</h2>
+                <p>
+                    Slijedite ove korake kako biste uspješno dodali titlove u videozapis s pomoću Canve:
+                </p>
+                <ol>
+                    <li>Prijavite se na <a href="https://www.canva.com" target="_blank">Canva</a> i kreirajte novi projekt za videozapis.</li>
+                    <li>Uvezite videozapis kojem želite dodati titlove klikom na opciju <strong>Upload</strong> (Prijenos).</li>
+                    <li>Dodajte tekstualne slojeve odabirom opcije <strong>Text</strong> (Tekst) i postavite ih na željeno mjesto unutar videozapisa.</li>
+                    <li>Sinkronizirajte pojavljivanje tekstova s ključnim trenucima u videozapisu povlačenjem vremenske trake.</li>
+                    <li>Prilagodite font, boju i stil titlova kako bi odgovarali sadržaju i bili lako čitljivi.</li>
+                    <li>Preuzmite uređeni videozapis klikom na opciju <strong>Download</strong> (Preuzimanje) i odaberite odgovarajući format.</li>
+                </ol>
+                <p>
+                    Detaljne upute možete pratiti i u sljedećem videozapisu:
+                </p>
+                <video controls width="640" height="360">
+                    <source src="canva.mp4" type="video/mp4">
+                    Vaš preglednik ne podržava HTML5 video element.
+                </video>
+            </section>
+            
+            
         </main>
     </div>
 
     <footer>
         <p>&copy; 2024 AllSeeing. Sva prava pridržana.</p>
     </footer>
-
-    <script>
-        function generateSubtitles() {
-            const transcript = document.getElementById("transcriptInput").value.trim();
-            const timeInterval = parseInt(document.getElementById("timeInterval").value, 10);
-            const outputDiv = document.getElementById("subtitleOutput");
-            
-            if (!transcript) {
-                outputDiv.innerHTML = "<pre>Molimo unesite tekst za generiranje titlova.</pre>";
-                return;
-            }
-
-            const lines = transcript.split('\n');
-            let formattedSubtitles = '';
-            let startTime = 0;
-
-            for (let i = 0; i < lines.length; i++) {
-                const endTime = startTime + timeInterval;
-                formattedSubtitles += `[${formatTime(startTime)} - ${formatTime(endTime)}] ${lines[i]}\n`;
-                startTime = endTime;
-            }
-
-            outputDiv.innerHTML = `<pre>${formattedSubtitles}</pre>`;
-        }
-
-        function formatTime(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
-            return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
-        }
-    </script>
 </body>
 </html>

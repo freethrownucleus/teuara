@@ -10,27 +10,11 @@ body {
     flex-direction: column;
 }
 
-.logo {
-    margin-top: 0.5rem;
-}
-
 /* Glavni kontejner za sadržaj */
 .container {
     display: flex;
     flex: 1;
 }
-
-/* Stil za tekst "Video lekcije" */
-.video-lekcije-header {
-    background-color: #004080; /* Plava pozadina */
-    color: white; /* Bijeli tekst */
-    padding: 10px; /* Unutarnji razmak */
-    margin-top: 0px;
-    margin-bottom: 20px; /* Razmak ispod */
-    font-weight: bold; /* Podebljani tekst */
-    text-align: center; /* Centriranje teksta */
-}
-
 
 /* Sidebar (lijevi izbornik) */
 .sidebar {
@@ -41,7 +25,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Stil za navigaciju unutar sidebar-a */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -66,6 +49,8 @@ body {
 main {
     flex: 1;
     padding: 20px;
+    line-height: 2;
+    text-align: justify;
 }
 
 /* Sekcije unutar glavnog sadržaja */
@@ -81,93 +66,98 @@ section h1, section h2 {
     color: #004080;
 }
 
-/* Stil za formu unutar sekcije */
-section#forma {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Stil za tekst "Video lekcije" */
+.video-lekcije-header {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    margin: 0 0 20px;
+    font-weight: bold;
     text-align: center;
 }
 
-form#kontakt-forma {
-    width: 100%;
-    max-width: 400px; /* Proširena širina za veću preglednost */
-    display: flex;
-    flex-direction: column;
-    padding: 20px; /* Unutarnji razmak oko forme */
-    background: #ffffff; /* Bijela pozadina */
-    border-radius: 10px; /* Zaobljeni rubovi */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Suptilna sjena */
+/* Stil za video */
+video {
+    display: block;
+    margin: 30px auto;
 }
 
-/* Stil za oznake (label) */
+/* Stil za formu */
+form#kontakt-forma {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
 form#kontakt-forma label {
     text-align: left;
     width: 100%;
-    font-weight: bold; /* Podebljan tekst */
-    margin-bottom: 5px; /* Razmak između oznake i polja */
-    color: #333; /* Suptilna tamna boja */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-/* Polja za unos */
 form#kontakt-forma input,
 form#kontakt-forma textarea {
     width: 100%;
-    padding: 10px; /* Unutarnji razmak */
-    margin-bottom: 15px; /* Razmak između polja */
-    border: 1px solid #ddd; /* Suptilni rub */
-    border-radius: 5px; /* Zaobljeni rubovi */
-    font-size: 1rem; /* Usklađena veličina fonta */
-    background-color: #f9f9f9; /* Blago sivkasta pozadina */
-    transition: background-color 0.3s, border-color 0.3s; /* Glatka promjena boje */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 form#kontakt-forma input:focus,
 form#kontakt-forma textarea:focus {
-    background-color: #fff; /* Bijela pozadina na fokus */
-    border-color: #004080; /* Plavi rub na fokus */
-    outline: none; /* Uklanja zadani fokus efekt */
+    background-color: #fff;
+    border-color: #004080;
+    outline: none;
 }
 
-/* Tekstualno polje */
 form#kontakt-forma textarea {
-    resize: vertical; /* Omogućava promjenu visine */
-    min-height: 100px; /* Minimalna visina */
+    resize: vertical;
+    min-height: 100px;
 }
 
-/* Gumb za slanje */
 form#kontakt-forma button {
     width: fit-content;
     display: block;
     margin: auto;
-    padding: 10px 20px; /* Veći unutarnji razmak */
-    background-color: #004080; /* Tamnoplava pozadina */
-    color: white; /* Bijeli tekst */
-    border: none; /* Bez ruba */
-    border-radius: 5px; /* Zaobljeni rubovi */
-    font-size: 1rem; /* Usklađena veličina fonta */
-    cursor: pointer; /* Ikona ruke */
-    transition: background-color 0.3s; /* Glatka promjena boje */
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Hover efekt za gumb */
 form#kontakt-forma button:hover {
-    background-color: #003366; /* Tamnija plava na hover */
+    background-color: #003366;
 }
-
 
 /* Header (zaglavlje) */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertikalno centriranje elemenata u headeru */
+    align-items: center;
     background-color: #004080;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 header .logo img {
     height: 70px;
+    display: block;
     width: auto;
 }
 
@@ -176,9 +166,8 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    justify-content: center; /* Centriranje svih stavki izbornika */
-    align-items: center; /* Vertikalno centriranje stavki unutar izbornika */
-    height: 100%; /* Osigurava da izbornik ima visinu koja omogućava centriranje */
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -195,17 +184,54 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-
 /* Footer (podnožje) */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #004080;
     color: white;
-    margin-top: auto; /* Gura footer na dno stranice */
+    margin-top: auto;
 }
 
 /* Osnovni stil za sve elemente */
 * {
     box-sizing: border-box;
+}
+
+/* Responzivni stilovi */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    form#kontakt-forma {
+        max-width: 100%;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    .video-lekcije-header {
+        font-size: 1rem;
+    }
 }

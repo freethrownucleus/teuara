@@ -13,17 +13,17 @@
             line-height: 1.2;
             color: gray;
             background-color: white;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
         /* Dobar dizajn: jasna čitljivost, sans-serif font, veća veličina */
         .good-font-example {
             font-family: Arial, sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
             color: black;
             background-color: white;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
         /* Veća veličina i podešavanje prostora između redaka za bolju čitljivost */
@@ -33,20 +33,26 @@
             line-height: 1.8;
             color: #333;
             background-color: white;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         /* Primjer sa podešenim razmakom između slova za veću čitljivost */
         .spaced-font-example {
             font-family: "Verdana", sans-serif;
             font-size: 18px;
-            letter-spacing: 0.5px;
-            line-height: 1.7;
+            letter-spacing: 1px;
+            line-height: 1.8;
             color: black;
             background-color: white;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
+        .spaced-font-buttons {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+    
         /* Dobro prilagođeni kontrast boje pozadine i fonta */
         .high-contrast-example {
             font-family: Arial, sans-serif;
@@ -54,8 +60,8 @@
             line-height: 1.7;
             color: #000;
             background-color: #fff;
-            margin-bottom: 20px;
-            border: 2px solid #000;
+            margin-bottom: 50px;
+            border: 4px solid #000;
         }
 
         .example-section {
@@ -76,62 +82,138 @@
 
         .font-example-output {
             font-size: 20px;
-            line-height: 1.6;
+            line-height: 1.5;
             color: black;
-            margin-top: 20px;
+            margin-top: 50px;
             padding: 10px;
             border: 1px solid #ddd;
             background-color: #f9f9f9;
+            white-space: pre-wrap; /* Omogućuje višeredni prikaz */
+        }
+
+
+        .custom-select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            margin-right: 10px;
+        }
+
+        .apply-button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .apply-button:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo" aria-label="Logo web stranice AllSeeing">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-            <li><a href="#tehnologije">Preporučene tehnologije</a></li>
-            <li><a href="o-nama.html">O nama</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="container">
     <!-- Lijevi izbornik -->
     <aside class="sidebar">
-        <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-        <ul class="video-lekcije-list">
-            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+        <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+        <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+            <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
             <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
             <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
             <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
             <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-            <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+            <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
             <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
             <li><a href="audio.html">Audio prilagodbe</a></li>
             <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-            <li><a href="smjernice.html">Smjernice za predavače</a></li>
             <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
         </ul>
     </aside>
 
     <main>
         <section>
-            <h1>Fontovi i veličina teksta</h1>
+            <h2>Fontovi i veličina teksta</h2>
             <p>
-                Kako bi tekst bio čitljiv, koristite sans-serif fontove poput Arial ili Verdana. Veličina teksta treba biti najmanje 16 px, uz mogućnost povećanja za korisnike s poteškoćama vida. Također, razmak između redaka i slova igra veliku ulogu u čitljivosti.
+                Kako bi tekst bio čitljiv, koristite sans-serif fontove poput Arial ili Verdana. Veličina teksta treba biti najmanje 16 px, uz mogućnost povećanja za korisnike s poteškoćama vida. Također, razmak između redaka i slova igra veliku ulogu u čitljivosti. Poželjno je koristiti razmak između redova (line-height) od barem 1.5 kako bi se olakšalo praćenje teksta.
             </p>
+        </section>
+
+        <section>
+            <div class="example-section">
+                <h2>Primjeri</h2>
+
+                <h3>Loš dizajn</h3>
+                <p class="bad-font-example">
+                    Ovo je primjer teksta napisanog s neodgovarajućim fontom i veličinom. Times New Roman s malim font-size (10 px) i niskim kontrastom otežava čitanje.
+                </p>
+
+                <h3>Dobar dizajn</h3>
+                <p class="good-font-example">
+                    Ovo je primjer teksta napisanog s odgovarajućim fontom i veličinom. Arial font s većom veličinom (16 px) i visokim kontrastom osigurava ugodno iskustvo čitanja.
+                </p>
+
+                <h3>Veća veličina i razmak između redaka</h3>
+                <p class="larger-font-example">
+                    Ovdje imamo primjer teksta s većom veličinom fonta (24 px) i povećanim razmakom između redaka, što dodatno poboljšava čitljivost.
+                </p>
+
+                <h3>Širi razmak između slova</h3>
+                <p class="spaced-font-example">
+                    Ovaj tekst koristi veći razmak između slova (letter-spacing: 1 px), što pomaže u čitljivosti za osobe koje imaju poteškoće s prepoznavanjem slova u gustim fontovima.
+                </p>
+
+                <h3>Visok kontrast</h3>
+                <p class="high-contrast-example">
+                    Ovaj primjer koristi visok kontrast između tamnog teksta i svijetle pozadine, što je ključno za korisnike s oštećenim vidom ili slabim kontrastom.
+                </p>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="font-buttons">
+                <h2>Prilagodite veličinu teksta</h2>
+                <div class="spaced-font-buttons">
+                    <p>Isprobajte različite veličine teksta i steknite uvid u to kako one utječu na čitljivost i vizualnu udobnost pri čitanju:</p>
+                    <button onclick="changeFontSize(16)">Normalna veličina</button>
+                    <button onclick="changeFontSize(20)">Povećana veličina</button>
+                    <button onclick="changeFontSize(24)">Velika veličina</button>
+                </div>
+                <p>Kada kliknete na jednu od triju veličina, ona će se primijeniti na cijelu stranicu. </p>
+            </div>
+        </section>
+
+        <section>
 
             <!-- Dodano polje za unos korisničkog teksta -->
             <div>
-                <h2>Unesite tekst i prilagodite izgled:</h2>
-                <textarea id="user-input" rows="5" style="width: 100%;" placeholder="Unesite vaš tekst ovdje..."></textarea>
+                <h2>Unesite tekst i prilagodite izgled</h2>
+                <p>Isprobajte donji generator koji će prebaciti vaš tekst u pristupačni oblik. Izaberite font, veličinu fonta, veličinu razmaka između redaka i veličinu razmaka između slova:</p>
+                <textarea id="user-input" rows="5" style="width: 100%; margin-top: 20px; font-size: 16px;" placeholder="Unesite vaš tekst ovdje..."></textarea>
                 <p>
                     <label>
                         <input type="radio" name="font-choice" value="Arial, sans-serif" checked>
@@ -144,67 +226,61 @@
                 </p>
                 <p>
                     <label for="font-size">Veličina fonta:</label>
-                    <select id="font-size">
+                    <select id="font-size" class="custom-select">
                         <option value="10">10px</option>
+                        <option value="11">11px</option>
                         <option value="12">12px</option>
                         <option value="14">14px</option>
                         <option value="16" selected>16px</option>
                         <option value="18">18px</option>
                         <option value="20">20px</option>
+                        <option value="22">22px</option>
                         <option value="24">24px</option>
+                        <option value="26">26px</option>
                         <option value="28">28px</option>
                         <option value="32">32px</option>
                         <option value="36">36px</option>
                         <option value="40">40px</option>
                         <option value="44">44px</option>
                         <option value="48">48px</option>
+                        <option value="72">72px</option>
                     </select>
                 </p>
-                
-                <button onclick="applyUserFontWithSize()">Primijeni</button>
+                <p>
+                    <label for="line-height">Razmak između redaka:</label>
+                    <select id="line-height" class="custom-select">
+                        <option value="1.0">1.0</option>
+                        <option value="1.15">1.15</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5" selected>1.5</option>
+                        <option value="2.0">2.0</option>
+                        <option value="2.5">2.5</option>
+                        <option value="3">3.0</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="letter-spacing">Razmak između slova:</label>
+                    <select id="letter-spacing" class="custom-select">
+                        <option value="0">Normalan</option>
+                        <option value="0.5px">0.5px</option>
+                        <option value="1px">1px</option>
+                        <option value="1.5px">1.5px</option>
+                        <option value="2px">2px</option>
+                        <option value="3px">3px</option>
+                        <option value="4px">4px</option>
+                        <option value="5px">5px</option>
+                    </select>
+                </p>
+                <button class="apply-button" onclick="applyUserFontWithSizeAndLineHeight()">Primijeni</button>
             </div>
 
             <!-- Prikaz korisničkog teksta s odabranim fontom i veličinom -->
-            <div id="user-output" class="font-example-output">
-                Ovdje će se prikazati vaš tekst nakon unosa, izbora fonta i veličine.
+            <div id="user-output" class="font-example-output">Ovdje će se prikazati vaš tekst nakon unosa, izbora fonta i svih potrebnih veličina.
             </div>
-
-            <div class="font-buttons">
-                <p><strong>Prilagodite veličinu teksta:</strong></p>
-                <button onclick="changeFontSize(16)">Normalna veličina</button>
-                <button onclick="changeFontSize(20)">Povećana veličina</button>
-                <button onclick="changeFontSize(24)">Velika veličina</button>
-            </div>
-
-            <div class="example-section">
-                <h2>Primjeri:</h2>
-
-                <h3>Loš dizajn</h3>
-                <p class="bad-font-example">
-                    Ovo je primjer teksta napisanog s neodgovarajućim fontom i veličinom. Times New Roman s malim font-size (10 px) i niskim kontrastom otežava čitanje.
-                </p>
-
-                <h3>Dobar dizajn</h3>
-                <p class="good-font-example">
-                    Ovo je primjer teksta napisanog s odgovarajućim fontom i veličinom. Arial font s većom veličinom (18 px) i visokim kontrastom osigurava ugodno iskustvo čitanja.
-                </p>
-
-                <h3>Veća veličina i razmak</h3>
-                <p class="larger-font-example">
-                    Ovdje imamo primjer teksta s većom veličinom fonta (24 px) i povećanim razmakom između redaka, što dodatno poboljšava čitljivost.
-                </p>
-
-                <h3>Širi razmak između slova</h3>
-                <p class="spaced-font-example">
-                    Ovaj tekst koristi veći razmak između slova (letter-spacing: 0.5px), što pomaže u čitljivosti za osobe koje imaju poteškoće s prepoznavanjem slova u gustim fontovima.
-                </p>
-
-                <h3>Visok kontrast</h3>
-                <p class="high-contrast-example">
-                    Ovaj primjer koristi visok kontrast između tamnog teksta i svijetle pozadine, što je ključno za korisnike s oštećenim vidom ili slabim kontrastom.
-                </p>
-
-            </div>
+            
+            <p>Trenutačno odabrane postavke (redom): <span id="current-font">Arial</span>, <span id="current-font-size">16px</span>, 
+                <span id="current-line-height">1.5</span>, <span id="current-letter-spacing">0</span>.
+            </p>
         </section>
     </main>
 </div>
@@ -219,21 +295,35 @@
         document.body.style.fontSize = size + "px";
     }
 
-    // Funkcija za primjenu korisničkog teksta, odabranog fonta i veličine
-    function applyUserFontWithSize() {
+    // Funkcija za primjenu korisničkog teksta, odabranog fonta, veličine i razmaka između redaka
+    function applyUserFontWithSizeAndLineHeight() {
         const userInput = document.getElementById("user-input").value;
         const fontChoice = document.querySelector('input[name="font-choice"]:checked').value;
         const fontSize = document.getElementById("font-size").value;
+        const lineHeight = document.getElementById("line-height").value;
+        const letterSpacing = document.getElementById("letter-spacing").value;
         const outputDiv = document.getElementById("user-output");
+
+        // Povećanje razmaka između redaka 1.5 puta
+        const adjustedLineHeight = parseFloat(lineHeight) * 1.5;
 
         if (userInput.trim()) {
             outputDiv.style.fontFamily = fontChoice;
             outputDiv.style.fontSize = fontSize + "px";
+            outputDiv.style.lineHeight = adjustedLineHeight;
+            outputDiv.style.letterSpacing = letterSpacing;
             outputDiv.textContent = userInput;
         } else {
-            outputDiv.textContent = "Molimo unesite tekst kako bi ga generator prikazao.";
+            outputDiv.textContent = "Ovdje unesite vaš tekst kako bi ga generator prikazao ...";
         }
+
+        // Ažuriraj prikaz trenutačnih postavki
+        document.getElementById("current-font").textContent = fontChoice;
+        document.getElementById("current-font-size").textContent = fontSize + "px";
+        document.getElementById("current-line-height").textContent = lineHeight; // Prikazuje odabranu vrijednost, ne prilagođenu
+        document.getElementById("current-letter-spacing").textContent = letterSpacing;
     }
+
 </script>
 
 </body>

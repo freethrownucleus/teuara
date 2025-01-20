@@ -13,10 +13,19 @@
             border-radius: 5px;
         }
 
+        #blue-yellow {
+            background-color: darkblue;
+            color: yellow;
+        }
+
+        #red-green {
+            background-color: green;
+            color: red;
+        }
+
         .color-box {
             display: inline-block;
-            width: 100px;
-            height: 50px;
+            width: 118px;
             margin: 5px;
             text-align: center;
             line-height: 50px;
@@ -25,7 +34,7 @@
         }
 
         .good-combinations, .bad-combinations {
-            margin-top: 20px;
+            margin-top: 50px;
         }
 
         .generator-container {
@@ -49,13 +58,18 @@
         }
 
         .generator-container button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            width: fit-content;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            padding: 10px 20px; /* Veći unutarnji razmak */
+            background-color: #004080; /* Tamnoplava pozadina */
+            color: white; /* Bijeli tekst */
+            border: none; /* Bez ruba */
+            border-radius: 5px; /* Zaobljeni rubovi */
+            font-size: 1rem; /* Usklađena veličina fonta */
+            cursor: pointer; /* Ikona ruke */
+            transition: background-color 0.3s; /* Glatka promjena boje */
         }
     </style>
 </head>
@@ -67,8 +81,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-                <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -78,68 +91,104 @@
     <div class="container">
         <!-- Lijevi izbornik -->
         <aside class="sidebar">
-            <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-            <ul class="video-lekcije-list">
-                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
-                <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
-                <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
-                <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
-                <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-                <li><a href="titlovi.html">Titlovi i transkripti</a></li>
-                <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
-                <li><a href="audio.html">Audio prilagodbe</a></li>
-                <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-                <li><a href="smjernice.html">Smjernice za predavače</a></li>
-                <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
-            </ul>
+            <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+                <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+                    <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
+                    <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
+                    <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
+                    <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
+                    <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
+                    <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
+                    <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
+                    <li><a href="audio.html">Audio prilagodbe</a></li>
+                    <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
+                    <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
+                </ul>
         </aside>
         <main>
             <section>
-                <h1>Kontrast i vizualni elementi</h1>
+                <h2>Kontrast i vizualni elementi</h2>
                 <p>
                     Kontrast i vizualni elementi igraju ključnu ulogu u pristupačnom dizajnu. Pravilna upotreba boja, kontrasta i vizualnih elemenata pomaže svim korisnicima, uključujući osobe s oštećenjima vida, u boljem razumijevanju sadržaja.
                 </p>
 
+            </section>
+
+            <section>
+                <h2>Što je vizualni kontrast?</h2>
+                <p>Vizualni kontrast odnosi se na razliku između elemenata na stranici, kao što su tekst i pozadina, kako bi sadržaj bio lako čitljiv i jasno prepoznatljiv. Kontrast se često mjeri razlikom u svjetlini ili boji između dva elementa, što omogućava korisnicima da lakše percipiraju sadržaj.</p>
+                <p>Pravilna primjena kontrasta ključna je za osiguravanje pristupačnosti web sadržaja, a posebno za osobe koje imaju poteškoće s razlikovanjem boja (daltonizam) ili slab vid. Svjetski standardi, poput WCAG-a (Web Content Accessibility Guidelines), preporučuju minimalne razine kontrasta kako bi se postigla inkluzivnost.</p>
+            </section>
+
+            <section id="wcag">
+                <h2>Što su WCAG standardi?</h2>
+                <p>
+                    <strong>WCAG</strong> (Web Content Accessibility Guidelines) smjernice su razvijene od strane W3C inicijative 
+                    za pristupačnost weba (WAI). Cilj WCAG-a je osigurati da web sadržaj bude dostupan svim korisnicima, 
+                    uključujući osobe s invaliditetom.
+                </p>
+                <p>
+                    WCAG se temelji na četiri osnovna načela:
+                </p>
+                <ul>
+                    <li><strong>Perceivable (perceptibilno):</strong> sadržaj mora biti predstavljen na način koji korisnici mogu uočiti.</li>
+                    <li><strong>Operable (operabilno):</strong> elementi sučelja moraju biti dostupni putem raznih uređaja, poput tipkovnice.</li>
+                    <li><strong>Understandable (razumljivo):</strong> informacije moraju biti jasne i jednostavne za razumijevanje.</li>
+                    <li><strong>Robust (robusno):</strong> sadržaj mora biti kompatibilan s pomoćnim tehnologijama.</li>
+                </ul></br>
+            
+                <h4>Objašnjenje ostalih kratica</h4>
+                <ul>
+                    <li><strong>W3C:</strong> World Wide Web Consortium (Svjetska organizacija za standardizaciju web tehnologija) - međunarodna organizacija koja razvija standarde za web.</li>
+                    <li><strong>WAI:</strong> Web Accessibility Initiative (Inicijativa za pristupačnost weba) - inicijativa unutar W3C koja se bavi razvojem smjernica i alatima za poboljšanje pristupačnosti weba.</li>
+                </ul>
+            </section>
+            
+            <section>
                 <h2>Zašto je kontrast važan?</h2>
                 <ul>
                     <li>Omogućuje bolju čitljivost teksta i vizualnih elemenata.</li>
                     <li>Pomaže korisnicima s niskim vidnim sposobnostima ili daltonizmom.</li>
                     <li>Poboljšava iskustvo svih korisnika, posebno u lošim uvjetima osvjetljenja.</li>
                 </ul>
-
+            </section>
+            <section>
                 <h2>Preporuke za kontrast</h2>
                 <ul>
                     <li>Koristite omjer kontrasta najmanje 4.5:1 za tekst i pozadinu.</li>
                     <li>Veliki tekst (24 px ili više) može koristiti niži omjer kontrasta od 3:1.</li>
                     <li>Izbjegavajte kombinacije boja poput crvene i zelene, koje su teško uočljive osobama s daltonizmom.</li>
                 </ul>
-
+            </section>
+            <section>
                 <h2>Dobre i loše kombinacije kontrasta</h2>
                 <div class="contrast-example" id="black-white">
                     <p>Crni tekst na bijeloj pozadini (dobar kontrast).</p>
                 </div>
                 <div class="contrast-example" id="blue-yellow">
-                    <p>Tamno plavi tekst na svijetlo žutoj pozadini (dobar kontrast).</p>
+                    <p>Tamnoplavi tekst na žutoj pozadini (dobar kontrast).</p>
                 </div>
                 <div class="contrast-example" id="red-green">
                     <p>Crveni tekst na zelenoj pozadini (loš kontrast).</p>
                 </div>
 
                 <div class="good-combinations">
-                    <h3>Dobre kombinacije:</h3>
+                    <h3>Dobre kombinacije</h3>
                     <div class="color-box" style="background-color: black;">Bijelo na crnom</div>
-                    <div class="color-box" style="background-color: #00008b;">Žuto na tamno plavom</div>
-                    <div class="color-box" style="background-color: navy; color: white;">Bijelo na tamno plavom</div>
-                    <div class="color-box" style="background-color: darkgreen;">Svijetlo žuto na tamno zelenom</div>
+                    <div class="color-box" style="background-color: blue; color: yellow;">Žuto na plavom</div>
+                    <div class="color-box" style="background-color: navy; color: white;">Bijelo na tamnoplavom</div>
+                    <div class="color-box" style="background-color: darkgreen; color: yellow;">Žuto na tamnozelenom</div>
                 </div>
                 <div class="bad-combinations">
-                    <h3>Loše kombinacije:</h3>
-                    <div class="color-box" style="background-color: red;">Zeleno na crvenom</div>
-                    <div class="color-box" style="background-color: green;">Crveno na zelenom</div>
+                    <h3>Loše kombinacije</h3>
+                    <div class="color-box" style="background-color: red; color: green;">Zeleno na crvenom</div>
+                    <div class="color-box" style="background-color: green; color: red;">Crveno na zelenom</div>
                     <div class="color-box" style="background-color: yellow; color: white;">Bijelo na žutom</div>
                     <div class="color-box" style="background-color: orange; color: red;">Crveno na narančastom</div>
                 </div>
 
+            </section>
+            <section>
                 <h2>Generator kontrasta</h2>
                 <div class="generator-container">
                     <label for="bg-color">Boja pozadine:</label>
@@ -150,11 +199,14 @@
                     <br>
                     <div class="color-preview" id="color-preview">Primjer teksta</div>
                     <button id="check-contrast">Provjeri kontrast</button>
+                    <p id="contrast-result"></p></br>
                     <p>
                         <strong>Kako radi generator kontrasta?</strong><br>
-                        Generator koristi formulu za izračun omjera kontrasta između boje teksta i boje pozadine. Omjer se računa na temelju osvjetljenja (luminance) svake boje. Preporučen omjer kontrasta za tekst je 4.5:1 (3:1 za veliki tekst).
+                        Generator koristi formulu za izračun omjera kontrasta između boje teksta i boje pozadine. Omjer se računa na temelju osvjetljenja (luminance) svake boje. Preporučen omjer kontrasta za tekst je 4.5:1 (3:1 za veliki tekst od 24 px nadalje).
+                    </p> 
+                    <p>
+                        Kliknite na „Provjeri kontrast” i testirajte različite kombinacije.
                     </p>
-                    <p id="contrast-result"></p>
                 </div>
             </section>
         </main>
@@ -205,10 +257,17 @@
             const textColor = textColorInput.value;
             const contrast = calculateContrast(bgColor, textColor).toFixed(2);
 
-            contrastResult.textContent = `Kontrast između odabranih boja je ${contrast}:1. ${
-                contrast >= 4.5 ? "Dobar kontrast!" : "Loš kontrast! Preporučujemo promjenu boja."
-            }`;
+            contrastResult.style.fontWeight = 'bold';
+            
+            if (contrast >= 4.5) {
+                contrastResult.style.color = 'green';
+                contrastResult.textContent = `Kontrast između odabranih boja je ${contrast}:1. Dobar kontrast!`;
+            } else {
+                contrastResult.style.color = 'red';
+                contrastResult.textContent = `Kontrast između odabranih boja je ${contrast}:1. Loš kontrast! Preporučujemo promjenu boja.`;
+            }
         });
+
     </script>
 </body>
 </html>

@@ -32,15 +32,19 @@
         }
 
         #record-btn {
-            background-color: #4caf50; /* Zeleno za snimanje */
+            background-color: #004080; 
         }
 
         #stop-btn {
-            background-color: #f44336; /* Crveno za zaustavljanje */
+            background-color: #f44336; 
+        }
+
+        #reset-btn {
+            background-color: #004080;
         }
 
         #save-btn {
-            background-color: #2196f3; /* Plavo za spremanje */
+            background-color: #004080;
         }
 
         #audio-recorder button:disabled {
@@ -58,7 +62,7 @@
             margin-top: 10px;
             font-size: 18px;
             font-weight: bold;
-            color: #f57c00; /* Narandžasta za status */
+            color: #f57c00; /* Narančasta za status */
         }
 
         #duration {
@@ -82,6 +86,10 @@
             background-color: #ddffdd; /* Svijetlo zelena za dobre primjere */
             border: 1px solid #4caf50;
         }
+        
+        #apps {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -92,8 +100,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="#prilagodba">Općenito o prilagodbama materijala</a></li>
-                <li><a href="#tehnologije">Preporučene tehnologije</a></li>
+                <li><a href="upute-platforma.html">Upute za korištenje platforme</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -102,18 +109,17 @@
 
     <div class="container">
         <aside class="sidebar">
-            <p class="video-lekcije-header"><strong>Videolekcije</strong></p>
-            <ul class="video-lekcije-list">
-                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen daltonizmu</a></li>
+            <p class="video-lekcije-header"><strong>Upute za predavače / profesore</strong></p> <!-- Dodana klasa za stiliziranje -->
+            <ul class="video-lekcije-list"> <!-- Dodana klasa za popis opcija -->
+                <li><a href="dizajn-daltonizam.html">Dizajn prilagođen osobama s daltonizmom</a></li>
                 <li><a href="fontovi-velicina.html">Fontovi i veličina teksta</a></li>
                 <li><a href="alt-tekst.html">Alternativni tekst za slike</a></li>
                 <li><a href="struktura-dokumenta.html">Struktura dokumenta</a></li>
                 <li><a href="naracija.html">Naracija i opis vizualnih elemenata</a></li>
-                <li><a href="titlovi.html">Titlovi i transkripti</a></li>
+                <li><a href="titlovi.html">Titlovi u videozapisima</a></li>
                 <li><a href="kontrast.html">Kontrast i vizualni elementi</a></li>
                 <li><a href="audio.html">Audio prilagodbe</a></li>
                 <li><a href="alati.html">Alati za provjeru pristupačnosti</a></li>
-                <li><a href="smjernice.html">Smjernice za predavače</a></li>
                 <li><a href="predlosci.html">Predlošci uz predavanja</a></li>
             </ul>
         </aside>
@@ -121,43 +127,86 @@
             <section>
                 <h1>Audio prilagodbe</h1>
                 <p>
-                    Audio prilagodbe su ključni aspekt pristupačnosti digitalnog sadržaja. Kroz prilagodbe kao što su poboljšanje kvalitete zvuka, transkripti i opcije za snimanje, osiguravamo da svi korisnici mogu koristiti sadržaj, uključujući osobe s oštećenjem sluha ili poteškoćama u razumijevanju zvučnih elemenata.
+                    Audio prilagodbe ključni su aspekt pristupačnosti digitalnog sadržaja. Prilagodbama kao što su poboljšanje kvalitete zvuka, transkripti i opcije za snimanje, osiguravamo da korisnici koji imaju problema s vidom mogu koristiti sadržaj oslanjajući se na audiozapise.
                 </p>
+            </section>
 
-                <h2>Kako koristiti snimač zvuka?</h2>
+            <section>
+                <h2>Prednosti kvalitetnih audio prilagodbi</h2>
                 <p>
-                    Snimač zvuka omogućuje jednostavno snimanje i spremanje zvuka. Slijedite ove korake:
+                    Prilagodbe u audio sadržaju ne samo da pomažu osobama s poteškoćama vida, već poboljšavaju cjelokupno korisničko iskustvo. Dobar audio sadržaj omogućuje:
                 </p>
-                <ol>
-                    <li>Kliknite na gumb "Započni snimanje".</li>
-                    <li>Govornik treba jasno govoriti kako bi se osigurala dobra kvaliteta snimke.</li>
-                    <li>Kliknite na "Zaustavi snimanje" kada završite.</li>
-                    <li>Pregledajte snimku koristeći ugrađeni player.</li>
-                    <li>Kliknite na "Spremi snimku" kako biste preuzeli datoteku na svoj uređaj.</li>
-                </ol>
+                <ul>
+                    <li><strong>Jasnu komunikaciju:</strong> korisnici lakše razumiju informacije kada su govorne upute jasne i razumljive.</li>
+                    <li><strong>Uključivanje svih korisnika:</strong> pristupačan sadržaj omogućuje da svi korisnici, bez obzira na njihove fizičke ili kognitivne sposobnosti, mogu u potpunosti sudjelovati u edukaciji i pristupiti važnim informacijama bez ograničenja.</li>
+                    <li><strong>Unaprijeđeno korisničko iskustvo:</strong> kvalitetan zvuk ne samo da poboljšava razumljivost, već stvara ugodno i profesionalno okruženje koje doprinosi većoj angažiranosti i zadovoljstvu korisnika.</li>
+                </ul>
+            </section>
+            
 
+            <section>
+                <h2>Savjeti za kvalitetno snimanje</h2>
+                <p>
+                    Za osiguravanje najbolje kvalitete audio prilagodbi, slijedite ove savjete:
+                </p>
+                <ul>
+                    <li>Koristite kvalitetan mikrofon i slušalice.</li>
+                    <li>Snimajte u prostoru s minimalnom pozadinskom bukom.</li>
+                    <li>Testirajte opremu prije početka snimanja.</li>
+                    <li>Govornik treba govoriti jasno i sporim tempom.</li>
+                </ul>
+            </section>
+
+            <section>
                 <h2>Primjeri dobre i loše prakse</h2>
+                <p>Oba primjera pokazat ćemo na snimci o besvjesnom stanju Crvenog križa.</p>
                 <div class="example bad-example">
                     <strong>Loš primjer:</strong> Snimanje u prostoriji s pozadinskom bukom i nejasnim govorom.
                     <ul>
                         <li>Snimka ima visoku razinu šuma.</li>
                         <li>Glas govornika nije razumljiv.</li>
                     </ul>
+                    <audio controls>
+                        <source src="losa_snimka.opus" type="audio/ogg">
+                        Vaš preglednik ne podržava ovu audio datoteku.
+                    </audio>
                 </div>
                 <div class="example good-example">
                     <strong>Dobar primjer:</strong> Snimanje u tihom okruženju s jasnim govorom i dobrim tonom.
                     <ul>
                         <li>Snimka je čista i razumljiva.</li>
-                        <li>Svi važni elementi su jasno istaknuti.</li>
+                        <li>Svi važni elementi jasno su istaknuti.</li>
                     </ul>
+                    <audio controls>
+                        <source src="dobra_snimka.opus" type="audio/ogg">
+                        Vaš preglednik ne podržava ovu audio datoteku.
+                    </audio>
                 </div>
+            </section>
 
+            <section>
+                <h2>Kako koristiti snimač zvuka?</h2>
+                <p>
+                    Snimač zvuka omogućuje jednostavno snimanje i spremanje zvuka. Slijedite ove korake:
+                </p>
+                <ol>
+                    <li>Kliknite na gumb „Započni snimanje”.</li>
+                    <li>Govornik treba jasno govoriti kako bi se osigurala dobra kvaliteta snimke.</li>
+                    <li>Kliknite na „Zaustavi snimanje” kada završite.</li>
+                    <li>Pregledajte snimku koristeći ugrađeni player.</li>
+                    <li>Ako želite snimati ispočetka, kliknite „Započni snimanje ispočetka”, inače kliknite "Započni snimanje" za nastavak snimanja.</li>
+                    <li>Kliknite na „Spremi snimku” kako biste preuzeli datoteku na svoj uređaj.</li>
+                </ol>
+            </section>
+
+            <section>
                 <h2>Snimač i pročišćivač zvuka</h2>
                 <div id="audio-recorder">
                     <audio id="audio-playback" controls></audio>
                     <div class="buttons-container">
                         <button id="record-btn">Započni snimanje</button>
                         <button id="stop-btn" disabled>Zaustavi snimanje</button>
+                        <button id="reset-btn" disabled>Započni snimanje ispočetka</button>
                         <button id="save-btn" disabled>Spremi snimku</button>
                     </div>
                     <div id="status"></div>
@@ -165,9 +214,19 @@
                 </div>
 
                 <p>
-                    Ovaj alat omogućava korisnicima snimanje i pregled snimki u nekoliko jednostavnih koraka. Provjerite da ste u tihom okruženju i koristite mikrofon visoke kvalitete za najbolje rezultate.
+                    Ovaj snimač i pročišćivač zvuka omogućava korisnicima snimanje i pregled snimki u nekoliko jednostavnih koraka. Provjerite da ste u tihom okruženju i koristite mikrofon visoke kvalitete za najbolje rezultate.
                 </p>
             </section>
+
+            <section>
+                <h2>Preporučene aplikacije za snimanje zvuka za predavanja</h2>
+                <ul>
+                    <li id="apps"><strong><a href="https://www.audacityteam.org/" target="_blank">Audacity (Windows, macOS, Linux):</a></strong> besplatna aplikacija za snimanje i uređivanje zvuka. Idealna je za predavače koji žele visokokvalitetne snimke s mogućnostima za detaljno uređivanje zvuka poput smanjenja šuma, normalizacije i mnogih drugih opcija.</li>
+                    <li id="apps"><strong><a href="https://www.apple.com/garageband/" target="_blank">GarageBand (macOS, iOS):</a></strong> moćna i intuitivna aplikacija za snimanje zvuka, koja dolazi s brojnim unaprijed postavljenim zvučnim efektima i funkcijama za uređivanje. Popularna je među korisnicima Apple uređaja, posebno za snimanje predavanja ili podcastova.</li>
+                    <li id="apps"><strong><a href="https://www.imore.com/voice-record-pro" target="_blank">Voice Record Pro (iOS, Android):</a></strong> jednostavna, ali vrlo moćna aplikacija za snimanje zvuka na mobilnim uređajima. Pruža visoku kvalitetu zvuka, mnoge opcije za uređivanje i omogućuje lako dijeljenje snimki u različitim formatima. Idealna je za brzo snimanje i dijeljenje snimki predavanja ili instrukcija.</li>
+                </ul>
+            </section>
+            
         </main>
     </div>
 
@@ -176,87 +235,225 @@
     </footer>
 
     <script>
-        const recordBtn = document.getElementById('record-btn');
-        const stopBtn = document.getElementById('stop-btn');
-        const saveBtn = document.getElementById('save-btn');
-        const audioPlayback = document.getElementById('audio-playback');
-        const status = document.getElementById('status');
-        const durationDisplay = document.getElementById('duration');
+        const recordBtn    = document.getElementById('record-btn');   // 1) "Započni snimanje" => (NOVO: CONTINUE)
+const stopBtn      = document.getElementById('stop-btn');     // 2) "Zaustavi snimanje"
+const resetBtn     = document.getElementById('reset-btn');    // 3) "Započni snimanje ispočetka" => (NOVO: OD NULE)
+const saveBtn      = document.getElementById('save-btn');     // 4) "Spremi snimku"
+const audioPlayback = document.getElementById('audio-playback');
+const statusEl     = document.getElementById('status');
+const durationEl   = document.getElementById('duration');
 
-        let audioContext, mediaRecorder, recordedChunks = [], stream, startTime, timer;
+// Za MediaRecorder i snimku
+let audioContext, mediaRecorder;
+let stream;
 
-        recordBtn.addEventListener('click', async () => {
-            try {
-                stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+// U to polje spremaju se segmenti snimke
+let recordedChunks = [];
 
-                const source = audioContext.createMediaStreamSource(stream);
-                const destination = audioContext.createMediaStreamDestination();
+// Vrijeme
+let accumulatedTime = 0; // ukupno vrijeme svih segmenata
+let startTime       = 0; // vrijeme početka trenutnog segmenta
+let timer           = null; // interval za prikaz vremena
 
-                source.connect(destination);
-                mediaRecorder = new MediaRecorder(destination.stream);
-                recordedChunks = [];
+/**
+ * 1) Inicijaliziramo mikrofon, postavljamo filtere (HP/LP/Gain) i MediaRecorder.
+ *    Nakon uspjeha, omogućimo gumbe za snimanje.
+ */
+async function initMicrophone() {
+  try {
+    // Tražimo audio stream
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-                mediaRecorder.ondataavailable = (e) => {
-                    if (e.data.size > 0) {
-                        recordedChunks.push(e.data);
-                    }
-                };
+    // Izvor iz mikrofona
+    const source = audioContext.createMediaStreamSource(stream);
 
-                mediaRecorder.onstop = () => {
-                    const audioBlob = new Blob(recordedChunks, { type: 'audio/webm' });
-                    const audioURL = URL.createObjectURL(audioBlob);
-                    audioPlayback.src = audioURL;
+    // Visokopropusni filter
+    const highPassFilter = audioContext.createBiquadFilter();
+    highPassFilter.type = 'highpass';
+    highPassFilter.frequency.setValueAtTime(300, audioContext.currentTime);
 
-                    saveBtn.disabled = false;
-                    clearInterval(timer);
+    // Niskopropusni filter
+    const lowPassFilter = audioContext.createBiquadFilter();
+    lowPassFilter.type = 'lowpass';
+    lowPassFilter.frequency.setValueAtTime(3000, audioContext.currentTime);
 
-                    stream.getTracks().forEach(track => track.stop());
-                };
+    // Pojačanje
+    const gainNode = audioContext.createGain();
+    gainNode.gain.setValueAtTime(1.2, audioContext.currentTime);
 
-                startTime = Date.now();
-                timer = setInterval(() => {
-                    const elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
-                    durationDisplay.textContent = `Duljina snimke: ${elapsedTime} sekundi`;
-                }, 100);
+    // Destination (za MediaRecorder)
+    const destination = audioContext.createMediaStreamDestination();
+    source
+      .connect(highPassFilter)
+      .connect(lowPassFilter)
+      .connect(gainNode)
+      .connect(destination);
 
-                status.textContent = 'Snimanje je u tijeku...';
-                status.style.color = 'green';
+    // Konačno: MediaRecorder
+    mediaRecorder = new MediaRecorder(destination.stream);
 
-                mediaRecorder.start();
-                recordBtn.disabled = true;
-                stopBtn.disabled = false;
-                saveBtn.disabled = true;
+    // Svaki prikupljeni segment se dodaje u recordedChunks
+    mediaRecorder.ondataavailable = (event) => {
+      if (event.data.size > 0) {
+        recordedChunks.push(event.data);
+      }
+    };
 
-            } catch (err) {
-                console.error('Pogreška prilikom pristupa mikrofonu:', err);
-                alert('Nije moguće pokrenuti snimanje. Provjerite dozvole za mikrofon.');
-            }
-        });
+    // Kad zaustavimo snimanje:
+    mediaRecorder.onstop = () => {
+      // Iz svih dosadašnjih segmenata radimo Blob
+      const audioBlob = new Blob(recordedChunks, { type: 'audio/webm' });
+      const audioURL  = URL.createObjectURL(audioBlob);
 
-        stopBtn.addEventListener('click', () => {
-            if (mediaRecorder && mediaRecorder.state === "recording") {
-                mediaRecorder.stop();
-            }
-            recordBtn.disabled = false;
-            stopBtn.disabled = true;
+      // Ako već postoji neka snimka u <audio>, oslobodi je
+      if (audioPlayback.src) {
+        URL.revokeObjectURL(audioPlayback.src);
+      }
+      audioPlayback.src = audioURL;
 
-            if (audioContext) {
-                audioContext.close();
-            }
+      // Zaustavimo timer
+      clearInterval(timer);
+      timer = null;
 
-            status.textContent = 'Snimanje je zaustavljeno.';
-            status.style.color = '#f57c00';
-        });
+      // Dodamo trajanje zadnjeg segmenta u "accumulatedTime"
+      const segmentTime = Date.now() - startTime;
+      accumulatedTime  += segmentTime;
+      startTime         = 0;
 
-        saveBtn.addEventListener('click', () => {
-            const audioBlob = new Blob(recordedChunks, { type: 'audio/webm' });
-            const url = URL.createObjectURL(audioBlob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'snimka.webm';
-            a.click();
-        });
+      // Prikažemo ukupno trajanje
+      const totalSec = (accumulatedTime / 1000).toFixed(1);
+      durationEl.textContent = `Ukupno trajanje: ${totalSec} sekundi`;
+
+      // Status i gumbi
+      statusEl.textContent = 'Snimanje zaustavljeno. Možete preslušati, spremiti snimku, nastaviti sa snimanjem ili započeti ispočetka.';
+      statusEl.style.color = '#f57c00';
+
+      recordBtn.disabled = false;  // sad "continue" opet moguće
+      resetBtn.disabled  = false;  // ili "od nule"
+      stopBtn.disabled   = true;
+      saveBtn.disabled   = false;
+    };
+
+    // Omogućimo "Započni snimanje" (koje sada radi continue)
+    recordBtn.disabled = false;
+    statusEl.textContent = 'Mikrofon je spreman za snimanje.';
+    statusEl.style.color = 'black';
+
+  } catch (err) {
+    console.error('Greška pri pristupu mikrofonu:', err);
+    statusEl.textContent = 'Nije moguće pristupiti mikrofonu. Provjerite dozvole.';
+    statusEl.style.color = 'red';
+  }
+}
+
+// Pokreni inicijalizaciju odmah kad se stranica učita
+window.onload = initMicrophone;
+
+/*****************************************************************
+ *  GUMB (1) "Započni snimanje" => SADA RADI 'CONTINUE'
+ *  Nikad ne resetira, samo dodaje nove segmente 
+ *****************************************************************/
+recordBtn.addEventListener('click', () => {
+  if (!mediaRecorder || mediaRecorder.state === 'recording') return;
+
+  statusEl.textContent = 'Snimanje je u tijeku...';
+  statusEl.style.color = 'green';
+
+  // "Append" način: NE brišemo recordedChunks, NE resetiramo vrijeme
+  mediaRecorder.start();
+  startTime = Date.now();
+
+  timer = setInterval(() => {
+    const elapsedMs = Date.now() - startTime;
+    const totalMs   = accumulatedTime + elapsedMs;
+    const totalSec  = (totalMs / 1000).toFixed(1);
+    durationEl.textContent = `Ukupno trajanje: ${totalSec} sekundi`;
+  }, 200);
+
+  recordBtn.disabled = true;  
+  stopBtn.disabled   = false;
+  resetBtn.disabled  = true;  // onemogućimo "od nule" dok opet ne zaustavimo
+  saveBtn.disabled   = true;  // snimku nećemo spremati dok snima
+});
+
+/*****************************************************************
+ *  GUMB (2) "Zaustavi snimanje"
+ *  Privremeno zaustavlja trenutni segment i generira audio u <audio>
+ *****************************************************************/
+stopBtn.addEventListener('click', () => {
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    mediaRecorder.stop();
+    stopBtn.disabled = true; // da se ne klikne opet
+  }
+});
+
+/*****************************************************************
+ *  GUMB (3) "Započni snimanje ispočetka" => SADA KREĆE OD NULE
+ *  Briše sve dosadašnje segmente i resetira vrijeme
+ *****************************************************************/
+resetBtn.addEventListener('click', () => {
+  if (!mediaRecorder) return;
+
+  // Prekidamo eventualno snimanje ako je uključeno
+  if (mediaRecorder.state === 'recording') {
+    mediaRecorder.stop();
+  }
+
+  // Sve resetiramo (kao staro "Započni snimanje")
+  recordedChunks   = [];
+  accumulatedTime  = 0;
+  audioPlayback.src = '';
+  durationEl.textContent = 'Ukupno trajanje: 0.0 sekundi';
+
+  statusEl.textContent = 'Snimanje ispočetka u tijeku...';
+  statusEl.style.color = 'green';
+
+  // Počinjemo potpuno ispočetka
+  mediaRecorder.start();
+  startTime = Date.now();
+
+  timer = setInterval(() => {
+    const elapsedMs = Date.now() - startTime;
+    const totalMs   = accumulatedTime + elapsedMs; // = 0 + elapsed
+    const totalSec  = (totalMs / 1000).toFixed(1);
+    durationEl.textContent = `Ukupno trajanje: ${totalSec} sekundi`;
+  }, 200);
+
+  // Ažuriraj gumbe
+  recordBtn.disabled = true;   // onemogućimo "continue" dok ponovno ne zaustavimo
+  stopBtn.disabled   = false;  
+  resetBtn.disabled  = true;  
+  saveBtn.disabled   = true;
+});
+
+/*****************************************************************
+ *  GUMB (4) "Spremi snimku"
+ *  Generira .webm sakupljen od svih segmenata i sprema ga
+ *****************************************************************/
+saveBtn.addEventListener('click', () => {
+  if (!recordedChunks.length) {
+    statusEl.textContent = 'Nema snimke za spremiti.';
+    statusEl.style.color = 'red';
+    return;
+  }
+
+  const audioBlob = new Blob(recordedChunks, { type: 'audio/webm' });
+  const url       = URL.createObjectURL(audioBlob);
+
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  a.download = 'Snimka.webm';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  statusEl.textContent = 'Snimka je spremljena na Vaš uređaj.';
+  statusEl.style.color = 'blue';
+});
+
     </script>
+    
 </body>
 </html>
